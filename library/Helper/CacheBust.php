@@ -1,6 +1,6 @@
 <?php
 
-namespace (#theme_namespace#)\Helper;
+namespace InnovationsPortalen\Helper;
 
 class CacheBust
 {

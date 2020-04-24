@@ -1,6 +1,6 @@
 <?php
 
-namespace (#theme_namespace#)\Controller;
+namespace InnovationsPortalen\Controller;
 
 /**
  * Controllers is loaded based on which theme-file is used on the current

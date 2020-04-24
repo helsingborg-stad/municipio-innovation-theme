@@ -1,8 +1,8 @@
 <?php
 
-namespace (#theme_namespace#)\Theme;
+namespace InnovationsPortalen\Theme;
 
-use (#theme_namespace#)\Helper\CacheBust as CacheBust;
+use InnovationsPortalen\Helper\CacheBust as CacheBust;
 
 class Enqueue
 {
@@ -20,7 +20,7 @@ class Enqueue
     public function style()
     {
         wp_enqueue_style(
-            '(#theme_namespace#)',
+            'InnovationsPortalen',
             get_stylesheet_directory_uri() .
                         '/assets/dist/' .
                         CacheBust::name('css/app.css'),
@@ -29,7 +29,7 @@ class Enqueue
         );
 
         wp_enqueue_style(
-            '(#theme_namespace#)-admin',
+            'InnovationsPortalen-admin',
             get_stylesheet_directory_uri() .
                         '/assets/dist/' .
                         CacheBust::name('css/admin.css'),
@@ -45,7 +45,7 @@ class Enqueue
     public function script()
     {
         wp_register_script(
-            '(#theme_namespace#)-js',
+            'InnovationsPortalen-js',
             get_stylesheet_directory_uri() .
                         '/assets/dist/' .
                         CacheBust::name('js/app.js'),
@@ -54,6 +54,6 @@ class Enqueue
             true
         );
 
-        wp_enqueue_script('(#theme_namespace#)-js');
+        wp_enqueue_script('InnovationsPortalen-js');
     }
 }
