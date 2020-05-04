@@ -43,6 +43,7 @@ class ComposerStaticInit56b2fffd0f76a5b31d7adcf64eb572bd
         'C' => 
         array (
             'Composer\\Installers\\' => 20,
+            'Carbon\\' => 7,
         ),
         'A' => 
         array (
@@ -119,23 +120,13 @@ class ComposerStaticInit56b2fffd0f76a5b31d7adcf64eb572bd
         array (
             0 => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers',
         ),
+        'Carbon\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
+        ),
         'AcfExportManager\\' => 
         array (
             0 => __DIR__ . '/..' . '/helsingborg-stad/acf-export-manager/src',
-        ),
-    );
-
-    public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/..' . '/nesbot/carbon/src',
-    );
-
-    public static $prefixesPsr0 = array (
-        'U' => 
-        array (
-            'UpdateHelper\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/kylekatarnls/update-helper/src',
-            ),
         ),
     );
 
@@ -144,8 +135,6 @@ class ComposerStaticInit56b2fffd0f76a5b31d7adcf64eb572bd
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit56b2fffd0f76a5b31d7adcf64eb572bd::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit56b2fffd0f76a5b31d7adcf64eb572bd::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInit56b2fffd0f76a5b31d7adcf64eb572bd::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit56b2fffd0f76a5b31d7adcf64eb572bd::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }
