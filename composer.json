@@ -1,0 +1,37 @@
+{
+    "name": "helsingborg-stad/municipio-innovation-theme",
+    "description": "Wordpress child theme for Municipio",
+    "type": "wordpress-theme",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nikolas Ramstedt",
+            "email": "nikolas.ramstedt@helsingborg.se"
+        },
+        {
+            "name": "Ehsan Zilaei",
+            "email": "ehsan.zilaei@helsingborg.se"
+        }
+    ],
+    "repositories": [
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/helsingborg-stad/municipio-innovation-theme.git"
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.0",
+        "philo/laravel-blade": "^3.1",
+        "symfony/debug": "^3.0",
+        "helsingborg-stad/acf-export-manager": ">=1.0.0"
+    },
+    "extra" : {
+        "installer-paths" : {
+            "vendor/{$name}/": ["type:wordpress-plugin"]
+        }
+    }
+}
