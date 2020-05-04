@@ -9,7 +9,6 @@
 # Municipio dependencies #
 ##########################
 wp/
-vendor/
 wp-content/*
 !wp-content/themes
 wp-content/themes/Municipio
