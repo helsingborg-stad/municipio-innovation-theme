@@ -1,3 +1,31 @@
+
+// General
 .is-child-theme {
-	//@import 'layout/base';
+	.navbar {
+		background-color: white;
+	}
+
+	.site-header.header-jumbo a {
+		padding: 24px 0px;
+	}
+
+	.site-header.header-jumbo a.logotype,
+	.site-header .logotype .h1,
+	a {
+		color: black;
+		font-size: 21px;
+	}
+}
+
+// Homepage
+.is-child-theme.home {
+	.navbar {
+		background-color: transparent;
+	}
+
+	.site-header.header-jumbo a.logotype,
+	.site-header .logotype .h1,
+	a {
+		color: white;
+	}
 }
