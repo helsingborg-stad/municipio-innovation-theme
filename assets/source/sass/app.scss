@@ -22,10 +22,21 @@
 	.navbar {
 		background-color: transparent;
 	}
-
+	
 	.site-header.header-jumbo a.logotype,
 	.site-header .logotype .h1,
 	a {
 		color: white;
+	}
+
+	// Sticky
+	.navbar.is-sticky-scroll {
+		background-color: white;
+		a.logotype,
+		.logotype .h1,
+		a {
+			color: black;
+			font-size: 21px;
+		}
 	}
 }
