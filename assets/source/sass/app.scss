@@ -40,3 +40,44 @@
 		}
 	}
 }
+
+.section.fontsize-xlarge .section-article {
+	h1, .h1 {
+		font-size: 64px;
+		line-height: 1.1;
+	}
+
+	p {
+		font-size: 19px;
+		font-weight: 300;
+	}
+
+	@media only screen and (min-width: 56em) {
+		h1, .h1 {
+			font-size: 80px;
+			line-height: 1.1;
+		}
+
+		p {
+			font-size: 21px;
+		}
+	}
+
+	@media only screen and (min-width: 100em) {
+		h1, .h1 {
+			font-size: 120px;
+			line-height: 1.1;
+		}
+
+		p {
+			font-size: 24px;
+		}
+	}
+	
+}
+
+
+// @media only screen and (min-width: 32.5em) {}
+// @media only screen and (min-width: 56em) {}
+// @media only screen and (min-width: 78em) {}
+// @media only screen and (min-width: 100em) {}
