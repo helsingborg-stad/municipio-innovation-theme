@@ -7,13 +7,13 @@ $c-white: #FFFFFF;
 $c-danger: #FF3F34;
 
 $c-gray: #F3F3F3;
-$c-grayLight: #f7f7f7;
-$c-grayDark: #f7f7f7;
+$c-gray-light: #f7f7f7;
+$c-gray-dark: #f7f7f7;
 
-$c-statusActive: #4EEC91;
-$c-statusPaused: #FF8C7C;
-$c-statusTesting: #F9BF3B;
-$c-statusExploration:	 #29C5FF;
+$c-status-active: #4EEC91;
+$c-status-paused: #FF8C7C;
+$c-status-testing: #F9BF3B;
+$c-status-exploration:	 #29C5FF;
 
 $font-size-small: 14px;
 $font-size-large: 24px;
@@ -25,3 +25,5 @@ $font-size-feature-copy: 32px;
 
 $border-radius: 4px;
 $border-radius-round: 24px;
+
+$box-shadow-card: 0px 10px 60px rgba(0, 0, 0, 0.07);
