@@ -40,6 +40,29 @@
 	}
 }
 
+
+// Remove stripes
+.is-child-theme {
+	.stripe {
+		display: none;
+	}
+
+	.has-stripe.has-stripe {
+		padding-left: 0;
+	}
+}
+
+
+// Fold indicator
+.fold-indicator {
+	display: block;
+	margin-top: 72px;
+
+	.fold-indicator__arrow {
+		margin-top: 32px;
+	}    
+}	
+
 .section.fontsize-xlarge .section-article {
 	h1, .h1 {
 		font-size: 56px;
