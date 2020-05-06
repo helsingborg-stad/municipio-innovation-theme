@@ -1,121 +1,31 @@
-// General
-.is-child-theme {
-	.navbar {
-		background-color: white;
-	}
+// Settings
+@import './settings/variables';
 
-	.site-header.header-jumbo a {
-		padding: 24px 0px;
-	}
+// Elements
+@import './elements/anchor';
+@import './elements/copy';
+@import './elements/headings';
 
-	.site-header.header-jumbo a.logotype,
-	.site-header .logotype .h1,
-	.navbar a {
-		color: black;
-		font-size: 21px;
-	}
-}
+// Components
+@import './components/article';
+@import './components/box';
+@import './components/button';
+@import './components/card';
+@import './components/filter';
+@import './components/form';
+@import './components/navigation';
+@import './components/notice';
+@import './components/pagination';
+@import './components/section';
+@import './components/fold-indicator';
 
-// Homepage
-.is-child-theme.home {
-	.navbar {
-		background-color: transparent;
-	}
-	
-	.site-header.header-jumbo a.logotype,
-	.site-header .logotype .h1,
-	.navbar a {
-		color: white;
-	}
+// Pages
+@import './pages/archive';
+@import './pages/home';
+@import './pages/single';
 
-	// Sticky
-	.navbar.is-sticky-scroll {
-		background-color: white;
-		a.logotype,
-		.logotype .h1,
-		a {
-			color: black;
-			font-size: 21px;
-		}
-	}
-
-}
-
-
-// Remove stripes
-.is-child-theme {
-	.stripe {
-		display: none;
-	}
-
-	.has-stripe.has-stripe {
-		padding-left: 0;
-	}
-}
-
-
-// Fold indicator
-.fold-indicator {
-	display: block;
-	position: absolute;
-	bottom: 48px;
-	left: 0;
-	right: 0;
-
-	.fold-indicator__arrow {
-		margin-top: 32px;
-	}    
-}	
-
-
-.section.section-full.section-lg, .section.section-featured.section-lg, .section.section-split.section-lg .section-article {
-	height: 97vh;
-	min-height: 646px;
-
-	@media only screen and (min-width: 56em) {
-		min-height: 800px;
-	}
-}
-
-.is-child-theme .section.effect-overlay .container,
-.is-child-theme .section .grid-xs-12 {
-	position: initial;
-}
-
-.section.fontsize-xlarge .section-article {
-	h1, .h1 {
-		font-size: 56px;
-		line-height: 1.1;
-	}
-
-	p {
-		font-size: 19px;
-		font-weight: 300;
-	}
-
-	@media only screen and (min-width: 56em) {
-		h1, .h1 {
-			font-size: 96px;
-			line-height: 1.1;
-		}
-
-		p {
-			font-size: 21px;
-		}
-	}
-
-	@media only screen and (min-width: 100em) {
-		h1, .h1 {
-			font-size: 120px;
-			line-height: 1.1;
-		}
-
-		p {
-			font-size: 24px;
-		}
-	}
-	
-}
+// Misc
+@import './misc/stripe';
 
 
 // @media only screen and (min-width: 32.5em) {}

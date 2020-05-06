@@ -1,0 +1,49 @@
+
+.section.section-full.section-lg, .section.section-featured.section-lg, .section.section-split.section-lg .section-article {
+	height: 97vh;
+	min-height: 646px;
+
+	@media only screen and (min-width: 56em) {
+		min-height: 800px;
+	}
+}
+
+.is-child-theme .section.effect-overlay .container,
+.is-child-theme .section .grid-xs-12 {
+	position: initial;
+}
+
+.section.fontsize-xlarge .section-article {
+	h1, .h1 {
+		font-size: 56px;
+		line-height: 1.1;
+	}
+
+	p {
+		font-size: 19px;
+		font-weight: 300;
+	}
+
+	@media only screen and (min-width: 56em) {
+		h1, .h1 {
+			font-size: 96px;
+			line-height: 1.1;
+		}
+
+		p {
+			font-size: 21px;
+		}
+	}
+
+	@media only screen and (min-width: 100em) {
+		h1, .h1 {
+			font-size: 120px;
+			line-height: 1.1;
+		}
+
+		p {
+			font-size: 24px;
+		}
+	}
+	
+}

@@ -1,0 +1,11 @@
+.fold-indicator {
+	display: block;
+	position: absolute;
+	bottom: 48px;
+	left: 0;
+	right: 0;
+
+	.fold-indicator__arrow {
+		margin-top: 32px;
+	}    
+}	
