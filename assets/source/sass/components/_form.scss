@@ -1,0 +1,45 @@
+.is-child-theme {
+    // Reset styles
+    select,
+    input, 
+    .input-group .input-group-addon {
+        background-color: initial;
+        border: none;
+        box-shadow: none;
+    }
+
+    .input-group {
+        background-color: $c-gray-light;
+        border-radius: $border-radius-round;
+        height: 100%;
+    
+        .input-group-addon {
+            border-left: none !important;
+            padding-left: $base * 3;
+            padding-right: $base;
+            font-size: $font-size-copy;
+        }
+
+        .form-control {
+            height: initial;
+        }
+    }   
+    input, select, ::placeholder {
+        font-size: $font-size-copy;
+        font-weight: $font-weight-bold;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    input, select {
+        line-height: $base * 4;
+    }
+
+    select {
+        background-color: $c-gray-light;
+        border-radius: $border-radius-round;
+        padding: $base $base * 2;
+        padding-right: $base * 5;
+        text-overflow:ellipsis;
+    }
+}
+
