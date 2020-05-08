@@ -1,0 +1,20 @@
+.is-child-theme {
+    .box.box--project {
+        box-shadow: none !important;
+    
+        .box__content {
+            padding: 0;
+            padding-top: 16px;
+        }
+
+        .box__organisation,
+        .box__status {
+            color: $c-black;
+        }
+
+        .box__title {
+            font-size: $font-size-large;
+            color: $c-black;
+        }
+    }
+}
