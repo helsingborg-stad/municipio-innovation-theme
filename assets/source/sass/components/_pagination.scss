@@ -1,0 +1,49 @@
+.is-child-theme {
+    .page-numbers {
+        margin-top: 16px;
+        margin-bottom: 48px;
+
+        li {
+            margin-right: 4px;
+        }
+
+        li > span,
+        li > a,
+        li > .current {
+            line-height: $base * 6 !important;
+            width: $base * 6 !important;
+            height: initial !important;
+
+            font-weight: $font-weight-bold;
+            font-size: $font-size-copy;
+            background-color: $c-gray-light;
+            border: none;
+            box-shadow: none;
+            border-radius: $border-radius-round;
+        }
+    
+        li > .current {
+            background-color: initial;
+            color: $c-black;
+        }
+
+
+        li > a.next,
+        li > a.prev {
+            width: 100% !important;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        li > .dots {
+            background-color: initial !important;
+        }
+
+        li > a.page-numbers:hover,
+        li > a.page-numbers:active,
+        li > a.page-numbers:focus {
+            color: $c-black !important;
+            background-color: $c-gray-dark !important;
+        }
+    }
+}
