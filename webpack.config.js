@@ -25,13 +25,13 @@ module.exports = {
     entry: {
         'js/app': './assets/source/js/app.js',
         'css/app': './assets/source/sass/app.scss',
-        'css/admin': './assets/source/sass/admin.scss'
+        // 'css/admin': './assets/source/sass/admin.scss'
     },
     /**
      * Output settings
      */
     output: {
-        filename: ifProduction('[name].[contenthash].js', '[name].[contenthash].js'),
+        filename: ifProduction('[name].[contenthash].js', '[name].js'),
         path: path.resolve(__dirname, 'assets', 'dist'),
     },
     /**
@@ -68,7 +68,12 @@ module.exports = {
             {
                 test: /\.(sa|sc|c)ss$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            hmr: process.env.NODE_ENV === 'development'
+                        }
+                    },
                     {
                         loader: 'css-loader',
                         options: {
@@ -102,7 +107,7 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
-                            name: ifProduction('[name].[contenthash:8].[ext]', '[name].[contenthash:8].[ext]'),
+                            name: ifProduction('[name].[contenthash:8].[ext]', '[name].[ext]'),
                             outputPath: 'images',
                             publicPath: '../images',
                         },
@@ -119,7 +124,7 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
-                            name: ifProduction('[name].[contenthash:8].[ext]', '[name].[contenthash:8].[ext]'),
+                            name: ifProduction('[name].[contenthash:8].[ext]', '[name].[ext]'),
                             outputPath: 'fonts',
                             publicPath: '../fonts',
                         },
@@ -142,7 +147,29 @@ module.exports = {
               // proxy the Webpack Dev Server endpoint
               // (which should be serving on http://localhost:3100/)
               // through BrowserSync
-              proxy: process.env.BROWSER_SYNC_PROXY_URL
+              proxy: process.env.BROWSER_SYNC_PROXY_URL,
+              injectCss: true,
+              injectChanges: true,
+              files: [{
+                // Reload page
+                match: ['**/*.php', 'assets/dist/**/*.js'],
+                fn: function(event, file) {
+                  if (event === "change") {
+                    const bs = require('browser-sync').get('bs-webpack-plugin');
+                    bs.reload();
+                  }
+                }
+              },
+              {
+                // Inject CSS
+                match: ['assets/dist/**/*.css'],
+                fn: function(event, file) {
+                  if (event === "change") {
+                    const bs = require('browser-sync').get('bs-webpack-plugin');
+                    bs.reload("*.css");
+                  }
+                }
+              }],
             },
             // plugin options
             {
@@ -167,7 +194,7 @@ module.exports = {
          * Output CSS files
          */
         new MiniCssExtractPlugin({
-            filename: ifProduction('[name].[contenthash:8].css', '[name].[contenthash:8].css')
+            filename: ifProduction('[name].[contenthash:8].css', '[name].css')
         }),
 
         /**
