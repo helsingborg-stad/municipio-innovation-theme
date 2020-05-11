@@ -58,3 +58,5 @@ wp-content/themes/Municipio
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+.env
