@@ -1,0 +1,8 @@
+.is-child-theme {
+    .btn {
+        font-size: $font-size-copy;
+        font-weight: $font-weight-bold;
+        padding: $base * 2 $base * 4;
+        line-height: 22px;
+    }
+}
