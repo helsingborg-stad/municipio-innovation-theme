@@ -1,0 +1,4 @@
+
+.is-child-theme .grid--columns > [class*="grid-"]:not(.grid):not([class*="grid--"]), .grid--margins > [class*="grid-"]:not(.grid):not([class*="grid--"]), .modularity-mod-index > .grid > [class*="grid-"]:not(.grid):not([class*="grid--"]), .modularity-mod-posts > .grid > [class*="grid-"]:not(.grid):not([class*="grid--"]), .modularity-mod-contact > .grid > [class*="grid-"]:not(.grid):not([class*="grid--"]), .mod-posts > .grid > [class*="grid-"]:not(.grid):not([class*="grid--"]) {
+    margin-bottom: 48px;
+}
