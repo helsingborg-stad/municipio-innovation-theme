@@ -1,0 +1,13 @@
+.project-header__title {
+    font-size: $font-size-large;
+    line-height: 1.1;
+	
+
+	@media only screen and (min-width: 56em) {
+        font-size: 56px;
+	}
+}
+
+.project-header__meta {
+    font-size: $font-size-copy;
+}

@@ -1,9 +1,9 @@
 
 .section.section-full.section-lg, .section.section-featured.section-lg, .section.section-split.section-lg .section-article {
 	height: 97vh;
-	min-height: 646px;
+	min-height: 680px;
 
-	@media only screen and (min-width: 56em) {
+	@media only screen and (min-width: 100em) {
 		min-height: 800px;
 	}
 }

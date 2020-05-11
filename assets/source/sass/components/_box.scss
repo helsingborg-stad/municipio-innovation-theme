@@ -1,10 +1,30 @@
 .is-child-theme {
+    .box.box-filled {
+        color: $c-black;
+        background-color: $c-gray-light;
+        box-shadow: none !important;
+
+        .box-content {
+            color: $c-black;
+        }
+    }
+
+    // Project boxes
     .box.box--project {
         box-shadow: none !important;
     
         .box__content {
             padding: 0;
-            padding-top: 16px;
+            padding-top: 24px;
+        }
+
+        .box__image {
+            background-color: $c-gray-dark;
+            box-shadow: $box-shadow-card;
+        }
+
+        .box__meta {
+            margin-bottom: $base * 1;
         }
 
         .box__organisation,
@@ -15,6 +35,28 @@
         .box__title {
             font-size: $font-size-large;
             color: $c-black;
+            margin-bottom: $base * 1.5; 
+        }
+
+        .box__tags {
+            color: $c-gray;
+        }
+    }
+
+    a.box.box--project:hover {
+        .box__tags,
+        .box__status,
+        .box__organisation {
+            text-decoration: none !important;
+        }
+    }
+
+    a.box.box--project:focus {
+        .box__title {
+            text-decoration: underline;
+        }
+        .box__image {
+            outline: solid 1px $c-black;
         }
     }
 }

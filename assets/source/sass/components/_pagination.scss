@@ -13,9 +13,9 @@
             line-height: $base * 6 !important;
             width: $base * 6 !important;
             height: initial !important;
-
             font-weight: $font-weight-bold;
             font-size: $font-size-copy;
+            color: $c-black;
             background-color: $c-gray-light;
             border: none;
             box-shadow: none;
@@ -24,7 +24,6 @@
     
         li > .current {
             background-color: initial;
-            color: $c-black;
         }
 
 
