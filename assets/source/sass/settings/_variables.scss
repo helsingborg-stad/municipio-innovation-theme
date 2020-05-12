@@ -36,3 +36,31 @@ $box-shadow-card: 0px 10px 60px rgba(0, 0, 0, 0.12);
 // Font weights
 $font-weight-normal: 400;
 $font-weight-bold: bold;
+
+
+//Breakpoints
+$breakpoints-map: (
+    xs : 0,         //0px
+    sm : 32.5em,    //520px
+    md : 56em,      //980px
+    lg : 78em,      //1248px
+    xl : 100em      //1600px
+) !default;
+
+// ***************************************************************
+// *** 1. Breakpoints
+// ***************************************************************
+
+$screen-xs-min: 0;
+$screen-xs-max: map-get($breakpoints-map, sm) - 0.0625em; //468px
+
+$screen-sm-min: $screen-xs-max + 0.0625em; //0.0625em = 1px
+$screen-sm-max: map-get($breakpoints-map, md) - 0.0625em; //768px
+
+$screen-md-min: $screen-sm-max + 0.0625em; //0.0625em = 1px
+$screen-md-max: map-get($breakpoints-map, lg)- 0.0625em; //960px
+
+$screen-lg-min: $screen-md-max + 0.0625em; //0.0625em = 1px
+$screen-lg-max: map-get($breakpoints-map, xl) - 0.0625em; //1280px
+
+$screen-xl-min: $screen-lg-max + 0.0625em; //0.0625em = 1px
