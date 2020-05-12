@@ -27,15 +27,6 @@ class Enqueue
             array(),
             ''
         );
-
-        wp_enqueue_style(
-            'InnovationsPortalen-admin',
-            get_stylesheet_directory_uri() .
-                        '/assets/dist/' .
-                        CacheBust::name('css/admin.css'),
-            array(),
-            ''
-        );
     }
 
     /**
