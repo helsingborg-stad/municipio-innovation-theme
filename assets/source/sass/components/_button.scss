@@ -1,8 +1,27 @@
-.is-child-theme {
+body.is-child-theme {
     .btn {
         font-size: $font-size-copy;
         font-weight: $font-weight-bold;
-        padding: $base * 2 $base * 4;
+        padding: $base * 1.25 $base * 2;
         line-height: 22px;
+        border-radius: $border-radius-round;
+    }
+
+    .btn.btn-lg {
+        border-radius: $border-radius-round-lg;
+        padding: $base * 3 $base * 5;
+    }
+
+    .btn.btn-contrasted {
+        background-color: $c-black;
+    }
+
+    .btn.btn-contrasted.disabled {
+        background-color: $c-gray-light;
+        color: #CCCCCC;
+    }
+
+    .btn.disabled {
+        pointer-events: none;
     }
 }
