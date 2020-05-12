@@ -47,3 +47,8 @@
 	}
 	
 }
+.is-child-theme {
+	.section.text-color-dark .section-article h1, .section.text-color-dark .section-article h2, .section.text-color-dark .section-article h3, .section.text-color-dark .section-article h4, .section.text-color-dark .section-article .widget_calendar caption, .widget_calendar .section.text-color-dark .section-article caption, .section.text-color-dark .section-article h5, .section.text-color-dark .section-article h6, .section.text-color-dark .section-image-caption h1, .section.text-color-dark .section-image-caption h2, .section.text-color-dark .section-image-caption h3, .section.text-color-dark .section-image-caption h4, .section.text-color-dark .section-image-caption .widget_calendar caption, .widget_calendar .section.text-color-dark .section-image-caption caption, .section.text-color-dark .section-image-caption h5, .section.text-color-dark .section-image-caption h6 {
+		color:$c-black; 
+	}
+}
