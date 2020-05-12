@@ -3,5 +3,14 @@
         background-color: $c-gray-light;
         border-top: initial;
         box-shadow: initial;
+
+
+        // Footer widget logo
+        .widget_media_image {
+            text-align: center;
+        }
+        .widget_media_image img[src$=".svg"] {
+            width: 112px;
+        }
     }
 }
