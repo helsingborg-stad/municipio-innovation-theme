@@ -1,0 +1,120 @@
+.section.section--idb-idea,
+.section.section--idb-plane,
+.section.section--idb-heart {
+    .section-image {
+
+        img[src$=".svg"] {
+            max-width: initial;
+        }
+    }
+    .section-article {
+        max-width: 620px;
+        margin: auto;
+    }
+}
+
+.section.section--idb-idea {
+    .section-image {
+        position: relative;
+        padding: 33%;
+        img[src$=".svg"] {
+            width: 300%;
+            position: absolute;
+            right: $base * 8;
+            top: 0;
+        }
+    }
+
+    @media only screen and (min-width: $screen-sm-min) {
+        .section-image {
+            padding: 25%;
+
+            img[src$=".svg"] {
+                width: 200%;
+            }
+        }
+    }
+
+    @media only screen and (min-width: $screen-lg-min) {
+        .section-image {
+            padding: 10%;
+
+            img[src$=".svg"] {
+                width: 350%;
+                right: 0;
+            }
+        }
+    }
+}
+
+.section.section--idb-heart {
+    .section-image {
+        position: relative;
+        padding: 33%;
+        img[src$=".svg"] {
+            width: 300%;
+            position: absolute;
+            left: $base * 8;
+            top: 0;
+        }
+    }
+
+    @media only screen and (min-width: $screen-sm-min) {
+        .section-image {
+            padding: 25%;
+
+            img[src$=".svg"] {
+                width: 200%;
+            }
+        }
+    }
+
+    @media only screen and (min-width: $screen-lg-min) {
+        .section-image {
+            padding: 10%;
+
+            img[src$=".svg"] {
+                width: 350%;
+                left: 0;
+            }
+        }
+    }
+}
+
+.section.section--idb-plane {
+    
+    .section-image {
+        position: relative;
+        padding: 33%;
+        img[src$=".svg"] {
+            width: 300%;
+            position: absolute;
+            right: $base * 8;
+            top: 0;
+        }
+    }
+    
+    @media only screen and (min-width: $screen-sm-min) {
+        .section-image {
+            padding: 25%;
+            
+            img[src$=".svg"] {
+                width: 200%;
+            }
+        }
+    }
+    
+    @media only screen and (min-width: $screen-lg-min) {
+        .section-image {
+            padding: 10%;
+            
+            img[src$=".svg"] {
+                width: 300%;
+                right: $base * 4;
+            }
+        }
+    }
+}
+
+// @media only screen and (min-width: $screen-md-min) {}
+// @media only screen and (min-width: $screen-lg-min) {}
