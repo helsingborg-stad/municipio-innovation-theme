@@ -4,6 +4,10 @@
         background-color: $c-gray-light;
         box-shadow: none !important;
 
+        a {
+            color: $c-black;
+        }
+
         .box-content {
             color: $c-black;
         }
