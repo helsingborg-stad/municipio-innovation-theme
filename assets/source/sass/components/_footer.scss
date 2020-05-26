@@ -10,7 +10,11 @@
             text-align: center;
         }
         .widget_media_image img[src$=".svg"] {
-            width: 112px;
+            width: 88px;
+            
+            @media only screen and (min-width: 78em) {
+                width: 96px;
+            }
         }
     }
 }
