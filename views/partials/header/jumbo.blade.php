@@ -1,3 +1,13 @@
+@php
+
+    $archiveUrl = get_post_type_archive_link('project');
+
+    if (is_singular('project') && isset($_GET) && !empty($_GET)) {
+        $archiveUrl .= '?' . http_build_query($_GET);
+    }
+
+@endphp
+
 <div class="search-top {!! apply_filters('Municipio/desktop_menu_breakpoint', 'hidden-sm'); !!} hidden-print" id="search">
     <div class="container">
         <div class="grid">
@@ -15,7 +25,7 @@
                 <div class="grid">
                     <div class="{{ get_field('header_centered', 'option') ? 'grid-md-12' : 'grid-sm-12 grid-md-4' }}">
                         @if (is_singular('project'))
-                            <a class="logotype logotype--back" href="{{get_post_type_archive_link('project')}}"><i class="pricon pricon-left-skinny-arrow u-mr-2"></i>Tillbaka</a>
+                            <a class="logotype logotype--back" href="{{ $archiveUrl }}"><i class="pricon pricon-left-skinny-arrow u-mr-2"></i>Tillbaka</a>
                         @else
                             {!! municipio_get_logotype(get_field('header_logotype', 'option'), get_field('logotype_tooltip', 'option')) !!}
                         @endif
