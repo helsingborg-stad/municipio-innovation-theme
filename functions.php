@@ -13,4 +13,9 @@ $loader->addPrefix('InnovationsPortalen', INNOVATIONSPORTALEN_PATH . 'library');
 $loader->addPrefix('InnovationsPortalen', INNOVATIONSPORTALEN_PATH . 'source/php/');
 $loader->register();
 
+add_action('after_setup_theme', function () {
+    load_theme_textdomain('municipio-innovation-theme', get_template_directory() . '/languages');
+});
+
+
 new InnovationsPortalen\App();
