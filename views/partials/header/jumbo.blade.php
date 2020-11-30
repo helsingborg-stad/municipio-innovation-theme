@@ -18,7 +18,7 @@
     </div>
 </div>
 
-<nav class="navbar navbar-mainmenu hidden-print {{ is_front_page() && get_field('header_transparent', 'option') ? 'navbar-transparent' : '' }} {{ get_field('header_sticky', 'option') ? apply_filters( 'Municipio/StickyScroll', 'sticky-scroll' ) : '' }}">
+<nav class="navbar navbar-mainmenu hidden-print {{ (is_front_page() && get_field('header_transparent', 'option') || is_singular('challenge') && get_field('header_transparent', 'option')) ? 'navbar-transparent' : '' }} {{ get_field('header_sticky', 'option') ? apply_filters( 'Municipio/StickyScroll', 'sticky-scroll' ) : '' }}">
     <div class="container">
         <div class="grid">
             <div class="grid-xs-12 {!! apply_filters('Municipio/header_grid_size', 'grid-md-12'); !!}">
