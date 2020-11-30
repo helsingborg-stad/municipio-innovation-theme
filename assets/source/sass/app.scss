@@ -34,6 +34,10 @@
 @import './misc/stripe';
 @import './misc/cookie-consent';
 
+.t-section-gray {
+    background-color: $c-gray-light;
+}
+
 
 // @media only screen and (min-width: 32.5em) {}
 // @media only screen and (min-width: 56em) {}
