@@ -24,7 +24,7 @@
             <div class="grid-xs-12 {!! apply_filters('Municipio/header_grid_size', 'grid-md-12'); !!}">
                 <div class="grid">
                     <div class="{{ get_field('header_centered', 'option') ? 'grid-md-12' : 'grid-sm-12 grid-md-4' }}">
-                        @if (is_singular('project'))
+                        @if (is_singular('project') && false)
                             <a class="logotype logotype--back" href="{{ $archiveUrl }}"><i class="pricon pricon-left-skinny-arrow u-mr-2"></i>Tillbaka</a>
                         @else
                             {!! municipio_get_logotype(get_field('header_logotype', 'option'), get_field('logotype_tooltip', 'option')) !!}
