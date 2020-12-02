@@ -1,11 +1,22 @@
 .fold-indicator {
 	display: block;
 	position: absolute;
-	bottom: 48px;
+
+	bottom: 16px;
 	left: 0;
 	right: 0;
-
+	
 	.fold-indicator__arrow {
-		margin-top: 32px;
+		margin-top: 24px;
 	}    
 }	
+
+@media only screen and (min-width: 56em) {
+	.fold-indicator {
+		bottom: 48px;
+
+		.fold-indicator__arrow {
+			margin-top: 32px;
+		}    
+	}	
+}
