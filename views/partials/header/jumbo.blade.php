@@ -23,14 +23,19 @@
         <div class="grid">
             <div class="grid-xs-12 {!! apply_filters('Municipio/header_grid_size', 'grid-md-12'); !!}">
                 <div class="grid">
-                    <div class="{{ get_field('header_centered', 'option') ? 'grid-md-12' : 'grid-sm-12 grid-md-4' }}">
+                    <div class="{{ get_field('header_centered', 'option') ? 'grid-md-12' : 'grid-sm-12 grid-md-4 u-flex u-justify-content-between u-align-items-center' }}">
                         @if (is_singular('project'))
                             <a class="logotype logotype--back" href="{{ $archiveUrl }}"><i class="pricon pricon-left-skinny-arrow u-mr-2"></i>Tillbaka</a>
                         @else
                             {!! municipio_get_logotype(get_field('header_logotype', 'option'), get_field('logotype_tooltip', 'option')) !!}
                         @endif
                         @if (strlen($navigation['mobileMenu']) > 0)
-                        <a href="#mobile-menu" data-target="#mobile-menu" class="{!! apply_filters('Municipio/mobile_menu_breakpoint', 'hidden-md hidden-lg'); !!} menu-trigger"><span class="menu-icon"></span></a>
+                            <button class="hamburger hamburger--spin u-ml-auto js-trigger-mobile-menu {!! apply_filters('Municipio/mobile_menu_breakpoint', 'hidden-md hidden-lg'); !!}" type="button">
+                                <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                                </span>
+                            </button>
+                        
                         @endif
                     </div>
 
@@ -49,7 +54,29 @@
 </nav>
 
 @if (strlen($navigation['mobileMenu']) > 0)
-    <nav id="mobile-menu" class="nav-mobile-menu nav-toggle-expand nav-toggle {!! apply_filters('Municipio/mobile_menu_breakpoint', 'hidden-md hidden-lg'); !!} hidden-print">
-        @include('partials.mobile-menu')
+    <nav id="mobile-menu" class="js-mobile-menu mobile-menu has-footer {!! apply_filters('Municipio/mobile_menu_breakpoint', 'hidden-md hidden-lg'); !!} hidden-print">
+        <div class="mobile-menu__body u-flex align-items-center justify-content-center">
+            @include('partials.mobile-menu')
+        </div>
+        <div class="mobile-menu__footer">
+            {{-- {!!
+                wp_nav_menu(array(
+                    'theme_location' => 'help-menu',
+                    'container' => 'nav',
+                    'container_class' => 'menu-help',
+                    'container_id' => '',
+                    'menu_class' => 'nav nav-mobile',
+                    'menu_id' => 'help-menu-top',
+                    'echo' => 'echo',
+                    'before' => '',
+                    'after' => '',
+                    'link_before' => '',
+                    'link_after' => '',
+                    'items_wrap' => '<ul class="%2$s">%3$s</ul>',
+                    'depth' => 1,
+                    'fallback_cb' => '__return_false'
+                ));
+            !!} --}}
+        </div>
     </nav>
 @endif
