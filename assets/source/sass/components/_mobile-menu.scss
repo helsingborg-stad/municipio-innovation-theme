@@ -1,0 +1,143 @@
+$color-menu-background: black;
+$color-menu-link: white;
+$menu-footer-height: 128px;
+
+$menu-transition-ms: 300ms;
+
+.mobile-menu {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    background: $color-menu-background;
+    z-index: 99998;
+    padding-top: 80px;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+
+    display: flex;
+    flex-direction: column;
+
+    visibility: hidden;
+
+    .mobile-menu__body {
+        height: 100%;
+        width: 100%;
+    }
+
+    .mobile-menu__footer {
+        height: $menu-footer-height;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 99999;
+        background-color: black;
+    }
+
+    ::-webkit-scrollbar,
+    &::-webkit-scrollbar  {
+        display: none;
+    }
+}
+
+.mobile-menu.has-footer {
+    .mobile-menu__body {
+        > *:last-child {
+            margin-bottom: $menu-footer-height;
+        }
+    }
+}
+
+
+
+.mobile-menu.is-open {
+    visibility: visible;
+}
+
+.site-header.header-jumbo .mobile-menu .nav-mobile {
+    width: 100%;
+    text-align: center;
+    background-color:$color-menu-background;
+    align-self: center;
+
+    .menu-item a {
+        opacity: 0.6;
+        color: white;
+        font-size: 32px;
+        font-weight: 300;
+        background-color: none;
+        transition: 150ms opacity ease;
+        padding-top: 12px;
+        padding-bottom: 12px;
+
+        &:hover,
+        &:focus {
+            opacity: 1;
+            background-color: initial;
+            color: #fff !important;
+            text-decoration: underline;
+        }
+    }
+
+    .current-menu-item {
+        background-color: initial !important;
+
+        > a {
+            opacity: 1 !important;
+            text-decoration: none;
+            cursor: default;
+            &:hover {
+                opacity: 1 !important;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+// Drawer
+.mobile-menu {
+    transition: visibility 0s linear $menu-transition-ms, $menu-transition-ms ease-in transform, $menu-transition-ms ease-in opacity;
+    opacity: 0;
+}
+
+.mobile-menu.is-open {
+    transition: visibility 0s linear 0s, $menu-transition-ms ease-out transform, $menu-transition-ms ease-out opacity;
+    z-index: 99998;
+    
+    opacity: 1;
+}
+
+.navbar.navbar-mainmenu {
+    // transition: $menu-transition-ms ease-in background-color;
+    
+    .logotype {
+        transition: $menu-transition-ms ease-in opacity;
+        opacity: 1;
+    }
+}
+
+body.has-open-mobile-menu .navbar.navbar-mainmenu {
+    // transition: $menu-transition-ms ease-out background-color;
+    background-color: transparent !important;
+    
+    .logotype {
+        transition: $menu-transition-ms ease-out opacity;
+        opacity: 0;
+    }
+}
+
+.navbar.navbar-mainmenu.is-sticky-scroll {
+    transition: 0ms background-color !important;
+}
+
+body.has-open-mobile-menu .navbar.navbar-mainmenu.is-sticky-scroll {
+    transition: $menu-transition-ms ease-out background-color !important;
+}
+
+body.has-open-mobile-menu .navbar {
+    z-index: 99999;
+}
