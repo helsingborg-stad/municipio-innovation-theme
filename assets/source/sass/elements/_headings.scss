@@ -2,3 +2,23 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     color:$c-black; 
 }
+
+h1,
+.h1 {
+    font-size: 32px;
+    line-height: 1.1;
+    
+    @media only screen and (min-width: 32.5em) {
+        font-size: 48px;
+    }
+    
+    @media only screen and (min-width: 78em) {
+        font-size: 64px;
+    }
+}
+
+.meta {
+    display: inline-block;
+    font-size: 21px;
+    text-transform: uppercase;
+}
