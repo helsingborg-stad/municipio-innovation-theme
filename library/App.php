@@ -5,6 +5,8 @@ class App
 {
     public function __construct()
     {
+        new \InnovationsPortalen\Editor\ExtendedQuote\Init();
+        new \InnovationsPortalen\Editor\PostTypeLink\Init();
         new \InnovationsPortalen\Theme\Enqueue();
         add_action('wp_enqueue_scripts', array($this, 'enqueueRobotoFont'));
     }
