@@ -26,6 +26,7 @@
 @import './components/scroll-dots';
 @import './components/fold-indicator';
 @import './components/footer';
+@import './components/featured-post';
 
 // Pages
 @import './pages/archive';
@@ -39,6 +40,7 @@
 .t-section-gray {
     background-color: $c-gray-light;
 }
+
 
 
 // @media only screen and (min-width: 32.5em) {}
