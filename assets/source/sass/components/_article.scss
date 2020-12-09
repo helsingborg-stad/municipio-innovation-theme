@@ -3,3 +3,18 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.is-child-theme #article {
+     
+
+    > blockquote,  
+    > figure,
+    > div,
+    > .featured-post {
+        margin-top: 32px;
+    }
+
+    > *:first-child {
+        margin-top: 0px;
+    }
+}
