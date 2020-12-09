@@ -2,6 +2,8 @@
 
 @section('content')
 
+@include('partials.page-header');
+
 <div class="container main-container u-pb-5">
 
     @include('partials.breadcrumbs')
@@ -9,7 +11,7 @@
     <div class="grid {{ implode(' ', apply_filters('Municipio/Page/MainGrid/Classes', wp_get_post_parent_id(get_the_id()) != 0 ? array('no-margin-top') : array())) }}">
         @include('partials.sidebar-left')
 
-        <div class="{{ $contentGridSize }} grid-print-12" id="readspeaker-read">
+        <div class="grid-xs-12 grid-md-auto grid-print-12" id="readspeaker-read">
 
             @if (is_active_sidebar('content-area-top'))
                 <div class="grid grid--columns sidebar-content-area sidebar-content-area-top">
@@ -20,7 +22,7 @@
             @while(have_posts())
                 {!! the_post() !!}
 
-                @include('partials.article')
+                @include('partials.article', array('articlTitleHidden' => true, 'articlTitleHidden' => true))
             @endwhile
 
             @if (is_active_sidebar('content-area'))
