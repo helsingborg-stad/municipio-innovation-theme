@@ -23,7 +23,7 @@ class Enqueue
             'InnovationsPortalen',
             get_stylesheet_directory_uri() .
                         '/assets/dist/' .
-                        CacheBust::name('css/app.css'),
+                        CacheBust::name('css/child-theme.css'),
             array(),
             ''
         );
@@ -39,7 +39,7 @@ class Enqueue
             'InnovationsPortalen-js',
             get_stylesheet_directory_uri() .
                         '/assets/dist/' .
-                        CacheBust::name('js/app.js'),
+                        CacheBust::name('js/child-theme.js'),
             array('jquery'),
             false,
             true
