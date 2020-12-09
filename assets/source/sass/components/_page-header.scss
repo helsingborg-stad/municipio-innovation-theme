@@ -11,12 +11,17 @@
     .page-header__image img {
         width: 100%;
         display: block;
-        max-width: 380px;
+        // max-width: 380px;
+        max-width: 456px;
         border-radius: 8px;
     }
 
     .page-header__content {
         max-width: 508px;
         margin-left: auto;
+
+        p {
+            font-size: $font-size-large;
+        }
     }
 }
