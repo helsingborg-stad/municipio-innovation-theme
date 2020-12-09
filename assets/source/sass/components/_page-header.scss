@@ -1,0 +1,22 @@
+.page-header {
+    background-color: $c-gray-light;
+
+    padding-top: $base * 10;
+    padding-bottom: $base * 10;
+
+    .page-header__title + * {
+        margin-top: $base * 2;
+    }
+
+    .page-header__image img {
+        width: 100%;
+        display: block;
+        max-width: 380px;
+        border-radius: 8px;
+    }
+
+    .page-header__content {
+        max-width: 508px;
+        margin-left: auto;
+    }
+}
