@@ -8,7 +8,7 @@
 
     @include('partials.breadcrumbs')
 
-    <div class="grid {{ implode(' ', apply_filters('Municipio/Page/MainGrid/Classes', wp_get_post_parent_id(get_the_id()) != 0 ? array('no-margin-top') : array())) }}">
+    <div class="grid {{ implode(' ', apply_filters('Municipio/Page/MainGrid/Classes', wp_get_post_parent_id(get_the_id()) != 0 ? array() : array())) }}">
         @include('partials.sidebar-left')
 
         <div class="grid-xs-12 grid-md-auto grid-print-12" id="readspeaker-read">
