@@ -6,6 +6,7 @@
 @import './elements/anchor';
 @import './elements/copy';
 @import './elements/headings';
+@import './elements/blockquote';
 
 // Objects
 @import './objects/grid';
@@ -27,6 +28,7 @@
 @import './components/fold-indicator';
 @import './components/footer';
 @import './components/featured-post';
+@import './components/page-header';
 
 // Pages
 @import './pages/archive';
