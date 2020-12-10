@@ -1,5 +1,5 @@
 <?php global $post; ?>
-<article id="article" class="clearfix u-mb-4">
+<article id="article" class="c-article clearfix full u-mb-4">
     @if (empty($articlTitleHidden))
         <h1>{{ the_title() }}</h1>
     @endif

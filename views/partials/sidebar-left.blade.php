@@ -1,5 +1,5 @@
 @if ($hasLeftSidebar||$hasRightSidebar)
-<aside class="grid-lg-3 sidebar-left-sidebar-disabled hidden-print @if(!$hasLeftSidebar && $hasRightSidebar) hidden-lg @endif">
+<aside class="grid-xs-12 grid-md-auto c-sidebar c-sidebar--left sidebar-left-sidebar-disabled hidden-print @if(!$hasLeftSidebar && $hasRightSidebar) hidden-lg @endif">
     @if (is_author())
         @include('partials.author-box')
     @endif
