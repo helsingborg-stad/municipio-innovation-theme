@@ -1,4 +1,9 @@
 .is-child-theme {
+    .box .box-content {
+        padding: 32px 24px;
+        border-radius: 8px;
+    }
+
     .box.box-filled {
         color: $c-black;
         background-color: $c-gray-light;
@@ -10,6 +15,11 @@
 
         .box-content {
             color: $c-black;
+        }
+
+
+        .box-title {
+            padding: 32px 24px 0 24px;
         }
     }
 
@@ -29,6 +39,7 @@
         .box__image {
             background-color: $c-gray-dark;
             box-shadow: $box-shadow-card;
+            border-radius: 8px;
         }
 
         .box__meta {
