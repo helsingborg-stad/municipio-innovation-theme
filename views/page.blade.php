@@ -2,7 +2,7 @@
 
 @section('content')
 
-@include('partials.page-header');
+@include('partials.page-header')
 
 <div class="container main-container u-pb-5">
 
