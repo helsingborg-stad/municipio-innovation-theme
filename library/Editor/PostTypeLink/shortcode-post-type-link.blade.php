@@ -7,7 +7,7 @@
             <span class="featured-post__meta">
                 {{get_post_type_object($post->post_type)->labels->singular_name}}
             </span>
-            <h4 class="featured-post__title h2">
+            <h4 class="featured-post__title h3">
                 {{$post->post_title}}
             </h4>
         </div>
