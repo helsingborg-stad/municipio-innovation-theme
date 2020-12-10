@@ -9,6 +9,12 @@ class App
         new \InnovationsPortalen\Editor\PostTypeLink\Init();
         new \InnovationsPortalen\Theme\Enqueue();
         add_action('wp_enqueue_scripts', array($this, 'enqueueRobotoFont'));
+        add_filter('the_content', array($this, 'removeParagraphWrappingFromImages'), 20, 1);
+    }
+
+    public function removeParagraphWrappingFromImages($content)
+    {
+        return preg_replace('/<p>(\s*)(<img .* \/>)(\s*)<\/p>/iU', '\2', $content);
     }
 
 
