@@ -39,7 +39,8 @@ $tankesatt-color-invert: white;
     }
 
     .box.box-card-post .box__title,
-    .box.box-card-post .box__content p {
+    .box.box-card-post .box__content p,
+    .box .box__content > * {
         color: $metoder-color-invert;
     }
 }
@@ -50,7 +51,8 @@ $tankesatt-color-invert: white;
     }
 
     .box.box-card-post .box__title,
-    .box.box-card-post .box__content p {
+    .box.box-card-post .box__content p,
+    .box .box__content > * {
         color: $guide-color-invert;
     }
 }
@@ -61,7 +63,8 @@ $tankesatt-color-invert: white;
     }
 
     .box.box-card-post .box__title,
-    .box.box-card-post .box__content p {
+    .box.box-card-post .box__content p,
+    .box .box__content > * {
         color: $tankesatt-color-invert;
     }
 }
