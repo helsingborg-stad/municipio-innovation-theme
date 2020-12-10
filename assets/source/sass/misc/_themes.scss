@@ -1,0 +1,108 @@
+$metoder-color-primary: #D35098;
+$metoder-color-foreground: #FCF7FA;
+$metoder-color-invert: white;
+
+$guide-color-primary: #EC6707;
+$guide-color-foreground: #FDF7F3;
+$guide-color-invert: white;
+
+$tankesatt-color-primary: #5BA2D9;
+$tankesatt-color-foreground: #F6F9FC;
+$tankesatt-color-invert: white;
+
+.single-metoder,
+.single-metod {
+    .btn.btn-primary {
+        background-color: $metoder-color-primary;
+        border-color: $metoder-color-primary;
+    }
+    
+    .featured-post {
+        background-color: $metoder-color-foreground;
+    }
+
+
+    .page-header.page-header--metoder,
+    .page-header.page-header--metod {
+        background-color: $metoder-color-primary;
+    
+        &, h1, .h1, .page-header__title {
+            color: $metoder-color-invert;
+        }
+    }    
+}
+
+.post-type-archive-metoder,
+.post-type-archive-metod {
+    .main-content {
+        background-color: $metoder-color-primary;
+    }
+
+    .box.box-card-post .box__title,
+    .box.box-card-post .box__content p {
+        color: $metoder-color-invert;
+    }
+}
+
+.post-type-archive-guide {
+    .main-content {
+        background-color: $guide-color-primary;
+    }
+
+    .box.box-card-post .box__title,
+    .box.box-card-post .box__content p {
+        color: $guide-color-invert;
+    }
+}
+
+.post-type-archive-tankesatt {
+    .main-content {
+        background-color: $tankesatt-color-primary;
+    }
+
+    .box.box-card-post .box__title,
+    .box.box-card-post .box__content p {
+        color: $tankesatt-color-invert;
+    }
+}
+
+
+.single-guide {
+    .page-header.page-header--guide {
+        background-color: $guide-color-primary;
+    
+        &, h1, .h1, .page-header__title {
+            color: $guide-color-invert;
+        }
+    }
+
+    .btn.btn-primary {
+        background-color: $guide-color-primary;
+        border-color: $guide-color-primary;
+    }
+
+    .featured-post,
+    .box.box-filled {
+        background-color: $guide-color-foreground;
+    }
+}
+
+.single-tankesatt {
+    .page-header.page-header--tankesatt {
+        background-color: $tankesatt-color-primary;
+    
+        &, h1, .h1, .page-header__title {
+            color: $tankesatt-color-invert;
+        }
+    }
+
+    .btn.btn-primary {
+        background-color: $tankesatt-color-primary;
+        border-color: $tankesatt-color-primary;
+    }
+
+    .featured-post,
+    .box.box-filled {
+        background-color: $tankesatt-color-foreground;
+    }
+}
