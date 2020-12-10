@@ -5,15 +5,59 @@ h1, h2, h3, h4, h5, h6,
 
 h1,
 .h1 {
-    font-size: 32px;
+    font-size: $font-size-h1-sm;
     line-height: 1.1;
     
     @media only screen and (min-width: 32.5em) {
-        font-size: 48px;
+        font-size: $font-size-h1-md;
     }
     
     @media only screen and (min-width: 78em) {
-        font-size: 64px;
+        font-size: $font-size-h1;
+    }
+}
+
+
+h2,
+.h2 {
+    font-size: $font-size-h2-sm;
+    line-height: 1.2;
+    
+    @media only screen and (min-width: 32.5em) {
+        font-size: $font-size-h2-md;
+    }
+    
+    @media only screen and (min-width: 78em) {
+        font-size: $font-size-h2;
+    }
+}
+
+
+h3,
+.h3 {
+    font-size: $font-size-h3-sm;
+    line-height: 1.2;
+    
+    @media only screen and (min-width: 32.5em) {
+        font-size: $font-size-h3-md;
+    }
+    
+    @media only screen and (min-width: 78em) {
+        font-size: $font-size-h3;
+    }
+}
+
+h4,
+.h4 {
+    font-size: $font-size-h4-sm;
+    line-height: 1.2;
+    
+    @media only screen and (min-width: 32.5em) {
+        font-size: $font-size-h4-md;
+    }
+    
+    @media only screen and (min-width: 78em) {
+        font-size: $font-size-h4;
     }
 }
 
