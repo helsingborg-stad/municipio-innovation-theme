@@ -29,11 +29,13 @@
 @import './components/footer';
 @import './components/featured-post';
 @import './components/page-header';
+@import './components/sidebars';
 
 // Pages
 @import './pages/archive';
 @import './pages/home';
 @import './pages/single';
+@import './pages/project';
 
 // Misc
 @import './misc/stripe';
