@@ -68,4 +68,6 @@
     <?php do_action('customer-feedback'); ?>
 </div>
 
+@include('partials.content-bottom')
+
 @stop
