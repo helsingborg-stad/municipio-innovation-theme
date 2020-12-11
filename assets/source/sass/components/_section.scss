@@ -8,12 +8,21 @@
 	}
 }
 
+.section.text-color-light {
+}
+
 .is-child-theme .section.effect-overlay .container,
 .is-child-theme .section .grid-xs-12 {
 	position: initial;
 }
 
-.section.fontsize-xlarge .section-article {
+.is-child-theme .section.fontsize-xlarge .section-article {
+	p {
+		font-size: $font-size-large;
+	}
+}
+
+.home.is-child-theme .section.fontsize-xlarge .section-article {
 	h1, .h1 {
 		font-size: 56px;
 		line-height: 1.1;

@@ -3,66 +3,68 @@ h1, h2, h3, h4, h5, h6,
     color:$c-black; 
 }
 
-h1,
-.h1 {
-    font-size: $font-size-h1-sm;
-    line-height: 1.1;
-    
-    @media only screen and (min-width: 32.5em) {
-        font-size: $font-size-h1-md;
+.is-child-theme, .is-child-theme .section.fontsize-xlarge .section-article {
+    h1,
+    .h1 {
+        font-size: $font-size-h1-sm;
+        line-height: 1.1;
+        
+        @media only screen and (min-width: 32.5em) {
+            font-size: $font-size-h1-md;
+        }
+        
+        @media only screen and (min-width: 78em) {
+            font-size: $font-size-h1;
+        }
     }
     
-    @media only screen and (min-width: 78em) {
-        font-size: $font-size-h1;
-    }
-}
-
-
-h2,
-.h2 {
-    font-size: $font-size-h2-sm;
-    line-height: 1.2;
     
-    @media only screen and (min-width: 32.5em) {
-        font-size: $font-size-h2-md;
-    }
-    
-    @media only screen and (min-width: 78em) {
-        font-size: $font-size-h2;
-    }
-}
-
-
-h3,
-.h3 {
-    font-size: $font-size-h3-sm;
-    line-height: 1.2;
-    
-    @media only screen and (min-width: 32.5em) {
-        font-size: $font-size-h3-md;
+    h2,
+    .h2 {
+        font-size: $font-size-h2-sm;
+        line-height: 1.2;
+        
+        @media only screen and (min-width: 32.5em) {
+            font-size: $font-size-h2-md;
+        }
+        
+        @media only screen and (min-width: 78em) {
+            font-size: $font-size-h2;
+        }
     }
     
-    @media only screen and (min-width: 78em) {
-        font-size: $font-size-h3;
-    }
-}
-
-h4,
-.h4 {
-    font-size: $font-size-h4-sm;
-    line-height: 1.2;
     
-    @media only screen and (min-width: 32.5em) {
-        font-size: $font-size-h4-md;
+    h3,
+    .h3 {
+        font-size: $font-size-h3-sm;
+        line-height: 1.2;
+        
+        @media only screen and (min-width: 32.5em) {
+            font-size: $font-size-h3-md;
+        }
+        
+        @media only screen and (min-width: 78em) {
+            font-size: $font-size-h3;
+        }
     }
     
-    @media only screen and (min-width: 78em) {
-        font-size: $font-size-h4;
+    h4,
+    .h4 {
+        font-size: $font-size-h4-sm;
+        line-height: 1.2;
+        
+        @media only screen and (min-width: 32.5em) {
+            font-size: $font-size-h4-md;
+        }
+        
+        @media only screen and (min-width: 78em) {
+            font-size: $font-size-h4;
+        }
     }
-}
-
-.meta {
-    display: inline-block;
-    font-size: 21px;
-    text-transform: uppercase;
+    
+    .meta {
+        display: inline-block;
+        font-size: 21px;
+        text-transform: uppercase;
+    }
 }
