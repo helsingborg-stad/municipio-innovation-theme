@@ -1,5 +1,3 @@
-@include('partials.post-filters')
-
 @php
     // Remove current post if exists
     if (count($posts) > 0 && is_single() 
