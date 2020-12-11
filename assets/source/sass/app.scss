@@ -10,6 +10,7 @@
 
 // Objects
 @import './objects/grid';
+@import './objects/section';
 
 // Components
 @import './components/hamburger';
@@ -41,11 +42,7 @@
 @import './misc/stripe';
 @import './misc/cookie-consent';
 @import './misc/themes';
-
-.t-section-gray {
-    background-color: $c-gray-light;
-}
-
+@import './misc/themes-toolbox';
 
 
 // @media only screen and (min-width: 32.5em) {}
