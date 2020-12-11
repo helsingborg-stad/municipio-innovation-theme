@@ -48,7 +48,10 @@ $tankesatt-color-invert: white;
     .box.box-card-post .box__content p,
     .box .box__content > *,
     h1, h2, h3, h4, h5, h6, 
-    .h1, .h2, .h3, .h4, .h5, .h6 {
+    .h1, .h2, .h3, .h4, .h5, .h6,
+    .related-posts a.related-posts__archive_link,
+    .related-posts a.related-posts__archive_link:hover,
+    .related-posts a.related-posts__archive_link:focus {
         color: $metoder-color-invert;
     }
 }
@@ -83,7 +86,10 @@ $tankesatt-color-invert: white;
     .box.box-card-post .box__content p,
     .box .box__content > *,
     h1, h2, h3, h4, h5, h6, 
-    .h1, .h2, .h3, .h4, .h5, .h6 {
+    .h1, .h2, .h3, .h4, .h5, .h6,
+    .related-posts a.related-posts__archive_link,
+    .related-posts a.related-posts__archive_link:hover,
+    .related-posts a.related-posts__archive_link:focus {
         color: $tankesatt-color-invert;
     }
 
@@ -118,6 +124,7 @@ $tankesatt-color-invert: white;
 }
 
 .post-type-archive-guide {
+    
     .main-content {
         color: $metoder-color-invert;
         background-color: $guide-color-primary;
@@ -127,7 +134,10 @@ $tankesatt-color-invert: white;
     .box.box-card-post .box__content p,
     .box .box__content > *,
     h1, h2, h3, h4, h5, h6, 
-    .h1, .h2, .h3, .h4, .h5, .h6 {
+    .h1, .h2, .h3, .h4, .h5, .h6,
+    .related-posts a.related-posts__archive_link,
+    .related-posts a.related-posts__archive_link:hover,
+    .related-posts a.related-posts__archive_link:focus {
         color: $guide-color-invert;
     }
 }
