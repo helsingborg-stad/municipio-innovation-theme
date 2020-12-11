@@ -18,7 +18,9 @@
             </time>
             @endif
 
-            {{ the_excerpt() }}
+            @if (get_the_excerpt($post->ID))
+                <p>{{ get_the_excerpt($post->ID)}}</p>
+            @endif
         </div>
     </div>
 </a>

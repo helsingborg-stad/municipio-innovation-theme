@@ -9,7 +9,7 @@
 @endphp
 
 
-<div class="grid" data-equal-container>
+<div class="grid related-posts" data-equal-container>
     @if (!$hideTitle && !empty($post_title))
         <div class="grid-xs-12">
             <div class="u-w-100">
@@ -19,7 +19,7 @@
                     </div>
                     @if ($posts_data_source !== 'input' && isset($archive_link) && $archive_link && $archive_link_url)
                     <div class="u-ml-auto grid-xs-fit-content">
-                        <a class="read-more u-ml-auto" href="{{ $archive_link_url }}?{{ http_build_query($filters) }}"><?php _e('Show more', 'modularity'); ?></a>
+                        <a class="u-ml-auto related-posts__archive_link" href="{{ $archive_link_url }}?{{ http_build_query($filters) }}"><?php _e('Show all', 'municipio-innovation-theme'); ?> <i class="pricon pricon-right-fat-arrow u-ml-1"></i></a>
                     </div>
                     @endif
                 </div>
