@@ -10,6 +10,7 @@ $tankesatt-color-primary: #5BA2D9;
 $tankesatt-color-foreground: #F6F9FC;
 $tankesatt-color-invert: white;
 
+
 .single-metoder,
 .single-metod {
     .btn.btn-primary {
@@ -40,11 +41,14 @@ $tankesatt-color-invert: white;
 .post-type-archive-metod {
     .main-content {
         background-color: $metoder-color-primary;
+        color: $metoder-color-invert;
     }
 
     .box.box-card-post .box__title,
     .box.box-card-post .box__content p,
-    .box .box__content > * {
+    .box .box__content > *,
+    h1, h2, h3, h4, h5, h6, 
+    .h1, .h2, .h3, .h4, .h5, .h6 {
         color: $metoder-color-invert;
     }
 }
@@ -72,11 +76,14 @@ $tankesatt-color-invert: white;
 .post-type-archive-tankesatt {
     .main-content {
         background-color: $tankesatt-color-primary;
+        color: $metoder-color-invert;
     }
     
     .box.box-card-post .box__title,
     .box.box-card-post .box__content p,
-    .box .box__content > * {
+    .box .box__content > *,
+    h1, h2, h3, h4, h5, h6, 
+    .h1, .h2, .h3, .h4, .h5, .h6 {
         color: $tankesatt-color-invert;
     }
 
@@ -112,12 +119,15 @@ $tankesatt-color-invert: white;
 
 .post-type-archive-guide {
     .main-content {
+        color: $metoder-color-invert;
         background-color: $guide-color-primary;
     }
 
     .box.box-card-post .box__title,
     .box.box-card-post .box__content p,
-    .box .box__content > * {
+    .box .box__content > *,
+    h1, h2, h3, h4, h5, h6, 
+    .h1, .h2, .h3, .h4, .h5, .h6 {
         color: $guide-color-invert;
     }
 }
