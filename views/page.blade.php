@@ -2,7 +2,10 @@
 
 @section('content')
 
-@include('partials.page-header')
+@include('partials.page-header', array(
+    'template' => get_field('page_header_template', get_queried_object_id()),
+    'pageHeader' => array()
+))
 
 <div class="container main-container u-pb-5">
 

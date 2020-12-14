@@ -1,3 +1,13 @@
+$page-header-max-width-content: 508px;
+$page-header-max-width-image: 456px;
+
+.u-max-width-header-content {
+    max-width: $page-header-max-width-content;
+}
+.u-max-width-header-image {
+    max-width: $page-header-max-width-image;
+}
+
 .page-header {
     background-color: $c-gray-light;
 
@@ -12,16 +22,17 @@
         width: 100%;
         display: block;
         // max-width: 380px;
-        max-width: 456px;
         border-radius: 8px;
     }
 
     .page-header__content {
-        max-width: 508px;
-        margin-left: auto;
-
         p {
             font-size: $font-size-large;
         }
     }
+}
+
+
+.u-offset-page-header-img {
+    margin-bottom: - $base * 8;
 }
