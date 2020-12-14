@@ -68,7 +68,9 @@
         margin-bottom: 0px;
     }
 
-    img.alignnone {
+    img.alignnone,
+    .wp-caption.alignnone {
+        max-width: initial;
         width: 100%;
     }
 
