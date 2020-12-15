@@ -1,18 +1,22 @@
-@if($post)
+@if(!empty($title) && !empty($url) && !empty($buttonText))
     <section class="featured-post">
-        <div class="featured-post__image">
-            <img src="{{municipio_get_thumbnail_source($post->ID, array(75,56), '3:2')}}">
-        </div>
+        @if (!empty($imageUrl))
+            <div class="featured-post__image">
+                <img src="{{$imageUrl}}">
+            </div>
+        @endif
         <div class="featured-post__content">
-            <span class="featured-post__meta">
-                {{get_post_type_object($post->post_type)->labels->singular_name}}
-            </span>
+            @if (!empty($meta))
+                <span class="featured-post__meta">
+                    {{$meta}}
+                </span>
+            @endif
             <h4 class="featured-post__title h3">
-                {{$post->post_title}}
+                {{$title}}
             </h4>
         </div>
         <div class="featured-post__action">
-            <a class="btn btn-light" href="{{get_permalink($post->ID)}}">{{$buttonText}}</a>
+            <a class="btn btn-light" href="{{$url}}">{{$buttonText}}</a>
         </div>
     </section>
 @endif
