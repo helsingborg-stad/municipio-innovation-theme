@@ -5,6 +5,7 @@ class App
 {
     public function __construct()
     {
+        new \InnovationsPortalen\Modularity\Posts();
         new \InnovationsPortalen\Editor\ExtendedQuote\Init();
         new \InnovationsPortalen\Editor\PostTypeLink\Init();
         new \InnovationsPortalen\Theme\Enqueue();
