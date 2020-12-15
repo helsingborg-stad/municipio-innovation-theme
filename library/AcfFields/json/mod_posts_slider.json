@@ -1,6 +1,6 @@
 [{
     "key": "group_5fd88a970d678",
-    "title": "Post Slider",
+    "title": "Innovation theme add-on",
     "fields": [
         {
             "key": "field_5fd88d9613316",
@@ -20,6 +20,44 @@
             "ui": 1,
             "ui_on_text": "",
             "ui_off_text": ""
+        },
+        {
+            "key": "field_5fd8945d21b96",
+            "label": "Module Heading Content",
+            "name": "module_heading_content",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5fd8952821b97",
+            "label": "Custom archive link text",
+            "name": "custom_archive_link_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
