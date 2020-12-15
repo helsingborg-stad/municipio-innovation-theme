@@ -18,10 +18,14 @@ $tankesatt-color-invert: white;
         border-color: $metoder-color-primary;
     }
     
-    .featured-post {
+    .featured-post,
+    .box.box-filled {
         background-color: $metoder-color-foreground;
     }
 
+    .t-foreground {
+        background-color: $metoder-color-foreground;
+    }
 
     .page-header.page-header--metoder,
     .page-header.page-header--metod {
@@ -32,9 +36,6 @@ $tankesatt-color-invert: white;
         }
     }    
 
-    .t-foreground {
-        background-color: $metoder-color-foreground;
-    }
 }
 
 .post-type-archive-metoder,
@@ -74,6 +75,19 @@ $tankesatt-color-invert: white;
     .box.box-filled {
         background-color: $tankesatt-color-foreground;
     }
+ 
+    .t-foreground {
+        background-color: $tankesatt-color-foreground;
+    }
+
+    .page-header.page-header--tankesatt,
+    .page-header.page-header--tankesatt {
+        background-color: $tankesatt-color-primary;
+    
+        &, h1, .h1, .page-header__title {
+            color: $tankesatt-color-invert;
+        }
+    }    
 }
 
 .post-type-archive-tankesatt {
