@@ -1,158 +1,67 @@
-$metoder-color-primary: #D35098;
-$metoder-color-foreground: #FCF7FA;
-$metoder-color-invert: white;
+$toolbox-themes: (
+    'metoder': (
+        primary: #D35098,
+        foreground:  #FCF7FA,
+        invert:white,
+    ),
+    'metod': (
+        primary: #D35098,
+        foreground:  #FCF7FA,
+        invert:white,
+    ),
+    'guide': (
+        primary: #EC6707,
+        foreground:  #FDF7F3,
+        invert:white,
+    ),
+    'tankesatt': (
+        primary: #5BA2D9,
+        foreground:  #F6F9FC,
+        invert:white,
+    ),
+);
 
-$guide-color-primary: #EC6707;
-$guide-color-foreground: #FDF7F3;
-$guide-color-invert: white;
 
-$tankesatt-color-primary: #5BA2D9;
-$tankesatt-color-foreground: #F6F9FC;
-$tankesatt-color-invert: white;
-
-
-.single-metoder,
-.single-metod {
-    .btn.btn-primary {
-        background-color: $metoder-color-primary;
-        border-color: $metoder-color-primary;
-    }
-    
-    .featured-post,
-    .box.box-filled {
-        background-color: $metoder-color-foreground;
-    }
-
-    .t-foreground {
-        background-color: $metoder-color-foreground;
-    }
-
-    .page-header.page-header--metoder,
-    .page-header.page-header--metod {
-        background-color: $metoder-color-primary;
-    
-        &, h1, .h1, .page-header__title {
-            color: $metoder-color-invert;
+@each $theme, $color in $toolbox-themes {
+    .single-#{$theme} {
+        .btn.btn-primary {
+            background-color: map-get($color, primary);
+            border-color: map-get($color, primary);
         }
-    }    
-
-}
-
-.post-type-archive-metoder,
-.post-type-archive-metod {
-    .main-content {
-        background-color: $metoder-color-primary;
-        color: $metoder-color-invert;
-    }
-
-    .box.box-card-post .box__title,
-    .box.box-card-post .box__content p,
-    .box .box__content > *,
-    h1, h2, h3, h4, h5, h6, 
-    .h1, .h2, .h3, .h4, .h5, .h6,
-    .related-posts a.related-posts__archive_link,
-    .related-posts a.related-posts__archive_link:hover,
-    .related-posts a.related-posts__archive_link:focus {
-        color: $metoder-color-invert;
-    }
-}
-
-.single-tankesatt {
-    .page-header.page-header--tankesatt {
-        background-color: $tankesatt-color-primary;
-    
-        &, h1, .h1, .page-header__title {
-            color: $tankesatt-color-invert;
-        }
-    }
-
-    .btn.btn-primary {
-        background-color: $tankesatt-color-primary;
-        border-color: $tankesatt-color-primary;
-    }
-
-    .featured-post,
-    .box.box-filled {
-        background-color: $tankesatt-color-foreground;
-    }
- 
-    .t-foreground {
-        background-color: $tankesatt-color-foreground;
-    }
-
-    .page-header.page-header--tankesatt,
-    .page-header.page-header--tankesatt {
-        background-color: $tankesatt-color-primary;
-    
-        &, h1, .h1, .page-header__title {
-            color: $tankesatt-color-invert;
-        }
-    }    
-}
-
-.post-type-archive-tankesatt {
-    .main-content {
-        background-color: $tankesatt-color-primary;
-        color: $metoder-color-invert;
-    }
-    
-    .box.box-card-post .box__title,
-    .box.box-card-post .box__content p,
-    .box .box__content > *,
-    h1, h2, h3, h4, h5, h6, 
-    .h1, .h2, .h3, .h4, .h5, .h6,
-    .related-posts a.related-posts__archive_link,
-    .related-posts a.related-posts__archive_link:hover,
-    .related-posts a.related-posts__archive_link:focus {
-        color: $tankesatt-color-invert;
-    }
-
-    .t-foreground {
-        background-color: $tankesatt-color-foreground;
-    }
-}
-
-
-.single-guide {
-    .page-header.page-header--guide {
-        background-color: $guide-color-primary;
         
-        &, h1, .h1, .page-header__title {
-            color: $guide-color-invert;
+        .featured-post,
+        .box.box-filled {
+            background-color: map-get($color, foreground);
+        }
+
+        .t-foreground {
+            background-color: map-get($color, foreground);
+        }
+
+        .page-header.page-header--#{$theme} {
+            background-color: map-get($color, primary);
+        
+            &, h1, .h1, .page-header__title {
+                color: map-get($color, invert);
+            }
+        }    
+    }
+
+    .post-type-archive-#{$theme} {
+        .main-content {
+            background-color: map-get($color, primary);
+            color: map-get($color, invert);
+        }
+    
+        .box.box-card-post .box__title,
+        .box.box-card-post .box__content p,
+        .box .box__content > *,
+        h1, h2, h3, h4, h5, h6, 
+        .h1, .h2, .h3, .h4, .h5, .h6,
+        .related-posts a.related-posts__archive_link,
+        .related-posts a.related-posts__archive_link:hover,
+        .related-posts a.related-posts__archive_link:focus {
+            color: map-get($color, invert);
         }
     }
-
-    .btn.btn-primary {
-        background-color: $guide-color-primary;
-        border-color: $guide-color-primary;
-    }
-
-    .featured-post,
-    .box.box-filled {
-        background-color: $guide-color-foreground;
-    }
-
-    .t-foreground {
-        background-color: $guide-color-foreground;
-    }
 }
-
-.post-type-archive-guide {
-    
-    .main-content {
-        color: $metoder-color-invert;
-        background-color: $guide-color-primary;
-    }
-
-    .box.box-card-post .box__title,
-    .box.box-card-post .box__content p,
-    .box .box__content > *,
-    h1, h2, h3, h4, h5, h6, 
-    .h1, .h2, .h3, .h4, .h5, .h6,
-    .related-posts a.related-posts__archive_link,
-    .related-posts a.related-posts__archive_link:hover,
-    .related-posts a.related-posts__archive_link:focus {
-        color: $guide-color-invert;
-    }
-}
-
