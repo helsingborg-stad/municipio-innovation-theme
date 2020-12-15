@@ -25,6 +25,7 @@ add_action('init', function () {
     $acfExportManager->setExportFolder(INNOVATIONSPORTALEN_PATH . 'library/AcfFields/');
     $acfExportManager->autoExport(array(
         'page_header' => 'group_5fd1e418be4a8',
+        'mod_posts_slider' => 'group_5fd88a970d678',
     ));
     $acfExportManager->import();
 });
