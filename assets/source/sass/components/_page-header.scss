@@ -1,5 +1,7 @@
 $page-header-max-width-content: 508px;
 $page-header-max-width-image: 456px;
+$page-header-background-color: #A61380;
+
 
 .u-max-width-header-content {
     max-width: $page-header-max-width-content;
@@ -9,7 +11,10 @@ $page-header-max-width-image: 456px;
 }
 
 .page-header {
-    background-color: $c-gray-light;
+    background-color: $page-header-background-color;
+    h1, h2, h3, h4, h5, h6, p {
+        color: white;
+    }
 
     padding-top: $base * 10;
     padding-bottom: $base * 10;
