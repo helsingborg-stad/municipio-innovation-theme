@@ -1,13 +1,8 @@
 @php
-    // Remove current post if exists
-    if (count($posts) > 0 && is_single() 
-    || count($posts) > 0 && is_singular(get_post_type())) {
-        $posts = array_filter($posts, function($post) {
-            return $post->ID !== get_queried_object_id();
-        });
-    }
+    // Sketchy implementation of extra view controller
+    $viewDataFromController = get_defined_vars()['__data'];
+    extract(\InnovationsPortalen\Modularity\Posts::data($viewDataFromController));
 @endphp
-
 
 <div class="grid related-posts" data-equal-container>
     @if (!$hideTitle && !empty($post_title))
