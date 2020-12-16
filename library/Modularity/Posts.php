@@ -43,6 +43,8 @@ class Posts
             $data['slider'] = array(
                 'flickityOptions' => json_encode($flickityOptions)
             );
+
+            $classes[] = 'js-post-slider';
         }
 
         $data['headingContent'] = !empty($meta['module_heading_content']) ? $meta['module_heading_content'][0] : '';
