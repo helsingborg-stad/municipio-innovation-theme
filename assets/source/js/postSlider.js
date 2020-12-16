@@ -31,10 +31,10 @@ const init = containerElement => {
 
 export default function() {
     const postSliderContainers = document.querySelectorAll(SELECTOR_CONTAINER);
+    console.log("🚀 ~ file: postSlider.js ~ line 37 ~ function ~ Flickity", Flickity)
 
     if (postSliderContainers.length > 0 
         && typeof Flickity !== 'undefined') {
-        console.log("🚀 ~ file: postSlider.js ~ line 37 ~ function ~ Flickity", Flickity)
         postSliderContainers.forEach(init);
     }
 }
