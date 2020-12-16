@@ -23,6 +23,17 @@ class Posts
             });
         }
 
+        $data['postsPerPage'] = !empty($meta['posts_count']) ? $meta['posts_count'][0] : 0;
+        $data['postCount'] = count($posts);
+        $data['columnsPerRow'] = 4;
+
+        $postColumnsFieldObject = get_field_object('posts_columns', $ID);
+        if (!empty($posts_columns)
+            && !empty($postColumnsFieldObject['choices'])
+            && isset($postColumnsFieldObject['choices'][$posts_columns])) {
+            $data['columnsPerRow'] = (int) $postColumnsFieldObject['choices'][$posts_columns];
+        }
+
         // Post Slider
         if (!empty($meta['enable_post_slider'])
             && $meta['enable_post_slider'][0] === '1') {
@@ -46,7 +57,7 @@ class Posts
                 'flickityOptions' => json_encode($flickityOptions)
             );
 
-            $classes[] = 'js-post-slider';
+            $classes[] = 'post-slider js-post-slider';
         }
 
         $data['headingContent'] = !empty($meta['module_heading_content']) ? $meta['module_heading_content'][0] : '';
