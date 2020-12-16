@@ -4,5 +4,5 @@
     extract(\InnovationsPortalen\Modularity\Posts::data($viewDataFromController));
 @endphp
 
-@includeWhen(!empty($slider), 'template-posts-slider');
-@includeWhen(empty($slider), 'template-posts');
+@includeWhen(!empty($slider), 'template-posts-slider')
+@includeWhen(empty($slider), 'template-posts')
