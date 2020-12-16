@@ -10,7 +10,7 @@ class Enqueue
     {
         // Enqueue scripts and styles
         add_action('wp_enqueue_scripts', array($this, 'style'));
-        add_action('wp_enqueue_scripts', array($this, 'script'), 20);
+        add_action('wp_enqueue_scripts', array($this, 'script'));
     }
 
     /**
@@ -40,7 +40,7 @@ class Enqueue
             get_stylesheet_directory_uri() .
                         '/assets/dist/' .
                         CacheBust::name('js/child-theme.js'),
-            array('jquery'),
+            array(),
             false,
             true
         );
