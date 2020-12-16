@@ -1,6 +1,6 @@
 <div class="grid related-posts {{$classes ?? ''}}" data-equal-container>
     @if (!$hideTitle && !empty($post_title))
-        <div class="grid-xs-12">
+        <div class="grid-xs-12 u-mb-3">
             <div class="u-w-100">
                 <div class="grid u-align-items-center">
                     <div class="grid-xs-auto">
@@ -8,13 +8,13 @@
                         <h2>{!! apply_filters('the_title', $post_title) !!}</h2>
                         @section('after-title')
                             @if (!empty($headingContent))
-                                <p>{{$headingContent}}</p>
+                                <p class="u-mt-1">{{$headingContent}}</p>
                             @endif
                         @show
                     </div>
                     @section('archive-link')
                         @if ($posts_data_source !== 'input' && isset($archive_link) && $archive_link && $archive_link_url)
-                            <div class="u-ml-auto grid-xs-fit-content">
+                            <div class="u-ml-auto grid-xs-fit-content u-align-self-end">
                                 <div class="grid">
                                     @yield('before-archive-link')
                                     <div class="grid-xs-12 u-text-right">
