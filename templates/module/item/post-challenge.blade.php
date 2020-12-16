@@ -13,7 +13,7 @@
 
 @endphp
 
-<a href="{{ $permalink }}" class="box box--project box--feature u-radius-8">
+<a href="{{ get_permalink($post->ID) }}" class="box box--project box--feature u-radius-8">
     <div class="box__container" data-equal-item>
         <div class="box__image ratio-12-16 u-radius-8" style="background-image:url('{{ municipio_get_thumbnail_source($post->ID,array(636,846), '12:16') }}');">
         </div>
