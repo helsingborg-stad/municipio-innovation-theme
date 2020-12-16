@@ -35,11 +35,9 @@
             @section('loop')
                 <div class="grid grid--columns">
                     @foreach ($posts as $post)
-                        @section('item')
-                            <div class="{{ $posts_columns }}">
-                                @includeFirst(['item.post-' . $post->post_type, 'item.post'], ['post' => $post])
-                            </div>
-                        @show
+                        <div class="{{ $posts_columns }}">
+                            @includeFirst(['item.post-' . $post->post_type, 'item.post'], ['post' => $post])
+                        </div>
                     @endforeach
                 </div>
             @show
