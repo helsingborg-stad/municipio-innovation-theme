@@ -33,7 +33,7 @@
     @if (count($posts) > 0)
         <div class="grid-xs-12">
             @section('loop')
-                <div class="grid grid--columns">
+                <div class="grid grid--columns u-w-100">
                     @foreach ($posts as $post)
                         <div class="{{ $posts_columns }}">
                             @includeFirst(['item.post-' . $post->post_type, 'item.post'], ['post' => $post])
