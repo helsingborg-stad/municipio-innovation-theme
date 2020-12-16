@@ -40,7 +40,7 @@ class Enqueue
             get_stylesheet_directory_uri() .
                         '/assets/dist/' .
                         CacheBust::name('js/child-theme.js'),
-            array('jquery', 'hbg-prime'),
+            array('jquery'),
             false,
             true
         );
