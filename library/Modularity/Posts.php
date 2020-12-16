@@ -12,8 +12,9 @@ class Posts
     public static function data($moduleData)
     {
         extract($moduleData);
+        $classes = array();
         $data = array();
-
+        
         // Remove current post if exists while in single/singular view
         if (count($posts) > 0 && is_single()
         || count($posts) > 0 && is_singular(get_post_type())) {
@@ -24,9 +25,31 @@ class Posts
 
         // Post Slider
         if (!empty($meta['enable_post_slider'])
-            && $meta['enable_post_slider'][0] === 1) {
-            // Prepare data
+            && $meta['enable_post_slider'][0] === '1') {
+            $flickityOptions = array(
+                'groupCells' => false,
+                'cellAlign' => 'left',
+                'draggable' => true,
+                'wrapAround' => true,
+                'arrowShape' => [
+                    'x0' => 10,
+                    'x1' => 60, 'y1' => 50,
+                    'x2' => 70, 'y2' => 40,
+                    'x3' => 30
+                ],
+                "pageDots" => false
+            );
+
+            $data['slider'] = array(
+                'flickityOptions' => json_encode($flickityOptions)
+            );
         }
+
+        $data['headingContent'] = !empty($meta['module_heading_content']) ? $meta['module_heading_content'][0] : '';
+        $data['archiveLinkText'] = !empty($meta['custom_archive_link_text']) ? $meta['custom_archive_link_text'][0] : __('Show all', INNOVATIONSPORTALEN_TEXTDOMAIN);
+
+        $data['classes'] = implode(' ', apply_filters('Modularity/Module/Classes', $classes, $post_type, $moduleData));
+
 
         return $data;
     }
