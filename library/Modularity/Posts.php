@@ -61,7 +61,7 @@ class Posts
         }
 
         $data['headingContent'] = !empty($meta['module_heading_content']) ? $meta['module_heading_content'][0] : '';
-        $data['archiveLinkText'] = !empty($meta['custom_archive_link_text']) ? $meta['custom_archive_link_text'][0] : __('Show all', INNOVATIONSPORTALEN_TEXTDOMAIN);
+        $data['archiveLinkText'] = !empty($meta['custom_archive_link_text'][0]) ? $meta['custom_archive_link_text'][0] : __('Show all', INNOVATIONSPORTALEN_TEXTDOMAIN);
 
         $data['classes'] = implode(' ', apply_filters('Modularity/Module/Classes', $classes, $post_type, $moduleData));
 
