@@ -5,3 +5,7 @@
 .flickity-resize .flickity-item {
     min-height: 100%;
   }
+
+.post-slider .post-slider__flickity:not(.flickity-enabled) .u-flickity-init-hidden {
+    display: none !important;
+}
