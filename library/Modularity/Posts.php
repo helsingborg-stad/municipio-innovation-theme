@@ -37,7 +37,9 @@ class Posts
                     'x2' => 70, 'y2' => 40,
                     'x3' => 30
                 ],
-                "pageDots" => false
+                "pageDots" => false,
+                'prevNextButtons' => false
+
             );
 
             $data['slider'] = array(
