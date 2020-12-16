@@ -4,7 +4,7 @@
         <img class="box__image u-w-100" src="{{ municipio_get_thumbnail_source($post->ID,array(400,225), '3:2') }}">
         @else
             @if (in_array('category', (array)get_field('archive_' . sanitize_title(get_post_type($post->ID)) . '_post_display_info', 'option')) && isset(get_the_category()[0]->name))
-            <span class="label-category label label-theme">{{ get_the_category()[0]->name }}</span>
+            <span class="label-category label label-theme">{{ get_the_category($post->ID)[0]->name }}</span>
             @endif
         @endif
 
