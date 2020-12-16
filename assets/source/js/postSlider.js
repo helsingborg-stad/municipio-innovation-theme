@@ -34,6 +34,7 @@ export default function() {
 
     if (postSliderContainers.length > 0 
         && typeof Flickity !== 'undefined') {
+        console.log("🚀 ~ file: postSlider.js ~ line 37 ~ function ~ Flickity", Flickity)
         postSliderContainers.forEach(init);
     }
 }
