@@ -1,20 +1,12 @@
-.is-child-theme,
-.is-child-theme .section .section-article {
+.is-child-theme {
     h1, h2, h3, h4, h5, h6,
     .h1, .h2, .h3, .h4, .h5, .h6 {
         color:$c-black; 
     }
 }
 
-.is-child-theme .section.text-color-light .section-article {
-    h1, h2, h3, h4, h5, h6,
-    .h1, .h2, .h3, .h4, .h5, .h6 {
-        color: white; 
-    }
-}
 
-
-.is-child-theme, 
+.is-child-theme,
 .is-child-theme .section.fontsize-xlarge .section-article {
     h1,
     .h1 {
@@ -85,10 +77,10 @@
         line-height: 1.1;
     
         @media only screen and (min-width: 56em) {
-            font-size: 96px;
+            font-size: 80px;
         }
     
-        @media only screen and (min-width: 100em) {
+        @media only screen and (min-width: 78em) {
             font-size: 120px;
             line-height: 1.1;
         }
