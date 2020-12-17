@@ -16,4 +16,12 @@
     }
 }
 
+  
+    .is-child-theme  .modularity-mod-posts .post-slider .box.box--project .box__image, 
+    .is-child-theme .modularity-mod-posts .post-slider .box.box-index .box__image, 
+    .is-child-theme .modularity-mod-posts .post-slider .box.box-card-post .box__image {
+        box-shadow: none !important;
+    }
+
+
 html { overflow-y: scroll; } 
