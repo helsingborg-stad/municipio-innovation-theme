@@ -14,6 +14,20 @@
     .flickity-viewport {
         padding: 0 !important;
     }
+
+    .box.box--project:not(.box--feature) {
+        @media only screen and (min-width: 78em) {
+            min-height: $base * 56;
+
+            .box__tags {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+            }
+        }
+    }
 }
 
   
