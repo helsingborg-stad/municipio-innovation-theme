@@ -2,8 +2,8 @@
 <div class="{{ $grid_size }}">
     <a href="{{ the_permalink() }}" class="box box-card-post">
         <div class="box__container" data-equal-item>
-            @if (municipio_get_thumbnail_source(null,array(400,225)))
-            <img class="box__image u-w-100" src="{{ municipio_get_thumbnail_source(null,array(400,225), '3:2') }}">
+            @if (municipio_get_thumbnail_source(null,array(504,336)))
+            <img class="box__image u-w-100" src="{{ municipio_get_thumbnail_source(null,array(504,336), '3:2') }}">
             @else
                 @if (in_array('category', (array)get_field('archive_' . sanitize_title(get_post_type()) . '_post_display_info', 'option')) && isset(get_the_category()[0]->name))
                 <span class="label-category label label-theme">{{ get_the_category()[0]->name }}</span>
