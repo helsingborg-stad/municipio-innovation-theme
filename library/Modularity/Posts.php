@@ -38,7 +38,7 @@ class Posts
         if (!empty($meta['enable_post_slider'])
             && $meta['enable_post_slider'][0] === '1') {
             $flickityOptions = array(
-                'groupCells' => false,
+                'groupCells' => true,
                 'cellAlign' => 'left',
                 'draggable' => true,
                 'wrapAround' => false,
