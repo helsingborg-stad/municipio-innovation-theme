@@ -45,6 +45,7 @@ class Posts
                 "pageDots" => false,
                 'prevNextButtons' => false,
                 'contain' => false,
+                'adaptiveHeight' => false,
 
             );
 
