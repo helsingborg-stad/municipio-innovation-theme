@@ -31,7 +31,7 @@
     @endif
 
     @if (count($posts) > 0)
-        <div class="grid-xs-12">
+        <div class="grid-xs-12 u-mb-0">
             @section('loop')
                 <div class="grid grid--columns u-w-100">
                     @foreach ($posts as $post)
@@ -44,7 +44,7 @@
         </div>
     @else
 
-    <div class="grid-md-12">
+    <div class="grid-md-12 u-mb-0">
         <?php _e('No posts to show…', 'modularity'); ?>
     </div>
 
