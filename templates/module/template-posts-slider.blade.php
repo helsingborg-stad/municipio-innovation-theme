@@ -24,11 +24,14 @@
 @stop
 
 @section('loop')
-    <div id="flickity-mod-posts-{{$ID}}" class="grid u-w-100 post-slider__flickity js-post-slider__flickity" data-flickity-options='{!! $slider['flickityOptions'] !!}'  data-equal-container>
+<div class="u-w-100">
+    <div id="flickity-mod-posts-{{$ID}}" class="grid post-slider__flickity js-post-slider__flickity" data-flickity-options='{!! $slider['flickityOptions'] !!}'  data-equal-container>
         @foreach ($posts as $post)
             <div class="post-slider__item @if (isset($columnsPerRow) && $loop->iteration > $columnsPerRow) u-flickity-init-hidden @endif {{ $posts_columns }}">
                 @includeFirst(['item.post-' . $post->post_type, 'item.post'], ['post' => $post])
             </div>
         @endforeach
     </div>
+
+</div>
 @stop
