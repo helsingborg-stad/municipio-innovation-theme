@@ -17,13 +17,15 @@ const init = containerElement => {
     const nextButton = containerElement.querySelector(SELECTOR_NEXT_BUTTON);
     
     if (flickityInstance?.previous && prevButton) {
-        prevButton.addEventListener('click', () => {
+        prevButton.addEventListener('click', (e) => {
+            e.preventDefault();
             flickityInstance.previous();
         });
     }
     
     if (flickityInstance?.next && nextButton) {
-        nextButton.addEventListener('click', () => {
+        nextButton.addEventListener('click', (e) => {
+            e.preventDefault();
             flickityInstance.next();
         });
     }
