@@ -47,13 +47,6 @@ $toolbox-themes: (
         }    
     }
 
-    body.is-child-theme  {
-        box-shadow: none !important;
-        border: solid 1px white !important;
-        color: white;
-        border-radius: 32px !important;
-    }
-
     .post-type-archive-#{$theme} {
         .main-content {
             background-color: map-get($color, primary);
