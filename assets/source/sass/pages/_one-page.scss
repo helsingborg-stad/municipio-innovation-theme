@@ -1,5 +1,7 @@
 .is-child-theme.page-template.page-template-one-page-blade {
     .main-content > * > .container > .grid.grid--columns > [class*="grid-"] {
-        margin-bottom: 64px;
+        @media only screen and (min-width: 32.5em) { 
+            margin-bottom: 64px;
+        }
     }
 }
