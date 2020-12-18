@@ -19,14 +19,35 @@ $c-status-exploration:	 #29C5FF;
 
 // Font size
 $font-size-small: 14px;
-$font-size-large: 24px;
+$font-size-large: 21px;
+$font-size-large-sm: 18px;
 $font-size-copy: 18px;
 $font-size-base: 16px;
 $font-size-hero: 120px;
+
 $font-size-feature: 72px;
 $font-size-feature-copy: 32px;
 
-// Border Radius
+
+// Headings
+$font-size-h1: 64px;
+$font-size-h2: 28px;
+$font-size-h3: 21px;
+$font-size-h4: 18px;
+
+
+$font-size-h1-md: 48px;
+$font-size-h2-md: 21px;
+$font-size-h3-md: 18px;
+$font-size-h4-md: 16px;
+
+$font-size-h1-sm: 32px;
+$font-size-h2-sm: 21px;
+$font-size-h3-sm: 18px;
+$font-size-h4-sm: 16px;
+
+
+// Border Radius 
 $border-radius: 4px;
 $border-radius-round: 24px;
 $border-radius-round-lg: 40px;
@@ -38,6 +59,8 @@ $box-shadow-card: 0px 10px 60px rgba(0, 0, 0, 0.12);
 $font-weight-normal: 400;
 $font-weight-bold: bold;
 
+
+$container-content-width: 574px;
 
 //Breakpoints
 $breakpoints-map: (

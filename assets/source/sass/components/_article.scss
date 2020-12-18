@@ -1,0 +1,81 @@
+#article {
+    // max-width: 732px;
+    // margin-left: auto;
+    // margin-right: auto;
+}
+
+.is-child-theme #article.c-article {
+    > hr {
+        height: 1px;
+        background-color: #EFEFEF;
+        border-radius: 0;
+    }
+
+    > h2, > .h2,
+    > h3, > .h3,
+    > h4, > .h4,
+    > h5, > .h5,
+    > h6, > .h6,
+    > hr,
+    > figure  {
+        margin-top: 56px;
+    }
+
+    > h2, > .h2,
+    > h3, > .h3,
+    > h4, > .h4,
+    > h5, > .h5,
+    > h6, > .h6,
+    > p,
+    > table,
+    > ul,
+    > ol,
+    > div,
+    > hr,
+    > .featured-post {
+        max-width: $container-content-width;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    > .lead {
+        max-width: initial;
+    }
+
+    > p {
+        margin-top: 24px;
+    }
+
+    > table,
+    > ul,
+    > ol,
+    > div,
+    > .featured-post {
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+
+    > img {
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+
+    > *:first-child {
+        margin-top: 0px;
+    }
+
+    > *:last-child {
+        margin-bottom: 0px;
+    }
+
+    img.alignnone,
+    .wp-caption.alignnone {
+        max-width: initial;
+        width: 100%;
+    }
+
+    > ul > li + li, 
+    > ol > li + li {
+        margin-top: 4px;
+    }
+}

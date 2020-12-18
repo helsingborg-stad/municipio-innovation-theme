@@ -1,0 +1,43 @@
+$page-header-max-width-content: 508px;
+$page-header-max-width-image: 456px;
+$page-header-background-color: $c-gray-light;
+
+
+.u-max-width-header-content {
+    max-width: $page-header-max-width-content;
+}
+.u-max-width-header-image {
+    max-width: $page-header-max-width-image;
+}
+
+.page-header {
+    background-color: $page-header-background-color;
+    h1, h2, h3, h4, h5, h6, p, .page-header__meta {
+        color: $c-black;
+    }
+
+    padding-top: $base * 10;
+    padding-bottom: $base * 10;
+
+    .page-header__title + * {
+        margin-top: $base * 2;
+    }
+
+    .page-header__image img {
+        width: 100%;
+        display: block;
+        // max-width: 380px;
+        border-radius: 8px;
+    }
+
+    .page-header__content {
+        p {
+            font-size: $font-size-large;
+        }
+    }
+}
+
+
+.u-offset-page-header-img {
+    margin-bottom: - $base * 8;
+}

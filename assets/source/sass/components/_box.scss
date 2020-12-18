@@ -1,4 +1,9 @@
 .is-child-theme {
+    .box .box-content {
+        padding: 32px 24px;
+        border-radius: 8px;
+    }
+
     .box.box-filled {
         color: $c-black;
         background-color: $c-gray-light;
@@ -11,10 +16,19 @@
         .box-content {
             color: $c-black;
         }
+
+
+        .box-title {
+            padding: 32px 24px 0 24px;
+        }
     }
 
-    // Project boxes
-    .box.box--project {
+
+
+    // Common boxes
+    .box.box--project,
+    .box.box-index,
+    .box.box-card-post {
         box-shadow: none !important;
     
         .box__content {
@@ -25,6 +39,7 @@
         .box__image {
             background-color: $c-gray-dark;
             box-shadow: $box-shadow-card;
+            border-radius: 8px;
         }
 
         .box__meta {
@@ -37,7 +52,6 @@
         }
 
         .box__title {
-            font-size: $font-size-large;
             color: $c-black;
             margin-bottom: $base * 1.5; 
         }
@@ -63,4 +77,40 @@
             outline: solid 1px $c-black;
         }
     }
+
+    .box.box-card-post {
+        .box__image {
+            border-radius: 8px;
+        }
+
+        .box__content {
+            p {
+                color: $c-black;
+                font-size: 16px;
+            }
+        }
+    }
+
+    a.box.box-card-post:hover,
+    a.box.box-card-post:focus {
+        text-decoration: none;
+        .box__title {
+            text-decoration: underline;
+        }
+        .box__content p {
+            text-decoration: none !important;
+        }
+    }
+
+
+    a.box.box-card-post:hover {
+        text-decoration: none;
+        .box__title {
+            text-decoration: underline;
+        }
+        .box__content p {
+            text-decoration: none !important;
+        }
+    }
+    
 }

@@ -1,5 +1,98 @@
 
-.section.section-full.section-lg, .section.section-featured.section-lg, .section.section-split.section-lg .section-article {
+
+// Heading colors
+.is-child-theme .section .section-article,
+.is-child-theme .section.text-color-dark  {
+    h1, h2, h3, h4, h5, h6,
+    .h1, .h2, .h3, .h4, .h5, .h6 {
+        color:$c-black; 
+    }
+}
+
+
+.is-child-theme .section.text-color-light {
+    h1, h2, h3, h4, h5, h6,
+    .h1, .h2, .h3, .h4, .h5, .h6 {
+        color: white; 
+    }
+}
+
+
+// Font sizes
+.home.is-child-theme .section.fontsize-xlarge  {}
+.home.is-child-theme .section.fontsize-large  {}
+
+.is-child-theme .section.fontsize-xlarge .section-article {
+	p {
+		font-size: $font-size-large-sm;
+		font-weight: 300;
+		
+		@media only screen and (min-width: $screen-md-min) {
+			font-size: $font-size-large;
+
+		}
+	}
+}
+
+
+// Padding
+.section.section-full.padding-sm, 
+.section.section-featured.padding-sm, 
+.section.section-split.padding-sm 
+.section-article {
+	padding-top: $base * 8;
+	padding-bottom: $base * 8;
+}
+
+.section.section-full.padding-md, 
+.section.section-featured.padding-md, 
+.section.section-split.padding-md .section-article {
+	padding-top: $base * 8;
+	padding-bottom: $base * 8;
+	
+	@media only screen and (min-width: 32.5em) { 
+		padding-bottom: $base * 14;
+		padding-top: $base * 14;
+	}
+}
+
+
+.section.section-full.padding-lg, 
+.section.section-featured.padding-lg, 
+.section.section-split.padding-lg .section-article {
+	padding-top: $base * 8;
+	padding-bottom: $base * 8;
+	
+	@media only screen and (min-width: 32.5em) {
+		padding-top: $base * 14;
+		padding-bottom: $base * 14;
+	}
+
+	@media only screen and (min-width: 78em) {
+		padding-top: $base * 18;
+		padding-bottom: $base * 18;
+	}
+}
+
+// Height
+.section.section-full.section-md, 
+.section.section-featured.section-md, 
+.section.section-split.section-md .section-article {
+}
+
+.section.section-full.section-lg, 
+.section.section-featured.section-lg, 
+.section.section-split.section-lg .section-article {
+
+}
+
+// Specific
+
+// Fixes
+
+.section.section-full.section-lg, 
+.section.section-featured.section-lg, 
+.section.section-split.section-lg .section-article {
 	height: 97vh;
 	min-height: 680px;
 
@@ -13,50 +106,4 @@
 	position: initial;
 }
 
-.section.fontsize-xlarge .section-article {
-	h1, .h1 {
-		font-size: 56px;
-		line-height: 1.1;
-	}
 
-	h2, .h2 {
-		font-size: 40px;
-		line-height: 1.1;
-	}
-
-	p {
-		font-size: 19px;
-		font-weight: 300;
-	}
-
-	@media only screen and (min-width: 56em) {
-		h1, .h1 {
-			font-size: 96px;
-		}
-
-		h1, .h2 {
-			font-size: 72px;
-		}
-
-		p {
-			font-size: 21px;
-		}
-	}
-
-	@media only screen and (min-width: 100em) {
-		h1, .h1 {
-			font-size: 120px;
-			line-height: 1.1;
-		}
-
-		p {
-			font-size: 24px;
-		}
-	}
-	
-}
-.is-child-theme {
-	.section.text-color-dark .section-article h1, .section.text-color-dark .section-article h2, .section.text-color-dark .section-article h3, .section.text-color-dark .section-article h4, .section.text-color-dark .section-article .widget_calendar caption, .widget_calendar .section.text-color-dark .section-article caption, .section.text-color-dark .section-article h5, .section.text-color-dark .section-article h6, .section.text-color-dark .section-image-caption h1, .section.text-color-dark .section-image-caption h2, .section.text-color-dark .section-image-caption h3, .section.text-color-dark .section-image-caption h4, .section.text-color-dark .section-image-caption .widget_calendar caption, .widget_calendar .section.text-color-dark .section-image-caption caption, .section.text-color-dark .section-image-caption h5, .section.text-color-dark .section-image-caption h6 {
-		color:$c-black; 
-	}
-}

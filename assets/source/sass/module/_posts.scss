@@ -1,0 +1,41 @@
+.flickity-enabled .flickity-item {
+    // height: inherit;
+}
+
+.flickity-resize .flickity-item {
+    min-height: 100%;
+  }
+
+.post-slider .post-slider__flickity:not(.flickity-enabled) .u-flickity-init-hidden {
+    display: none !important;
+}
+
+.post-slider {
+    .flickity-viewport {
+        padding: 0 !important;
+    }
+
+    .box.box--project:not(.box--feature) {
+        @media only screen and (min-width: 78em) {
+            min-height: $base * 56;
+
+            .box__tags {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+            }
+        }
+    }
+}
+
+  
+    .is-child-theme  .modularity-mod-posts .post-slider .box.box--project .box__image, 
+    .is-child-theme .modularity-mod-posts .post-slider .box.box-index .box__image, 
+    .is-child-theme .modularity-mod-posts .post-slider .box.box-card-post .box__image {
+        box-shadow: none !important;
+    }
+
+
+html { overflow-y: scroll; } 

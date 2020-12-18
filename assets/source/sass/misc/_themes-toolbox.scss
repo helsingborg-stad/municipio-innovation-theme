@@ -1,0 +1,91 @@
+$toolbox-themes: (
+    'metoder': (
+        primary: #D35098,
+        foreground:  #FCF7FA,
+        invert:white,
+    ),
+    'metod': (
+        primary: #D35098,
+        foreground:  #FCF7FA,
+        invert:white,
+    ),
+    'guide': (
+        primary: #EC6707,
+        foreground:  #FDF7F3,
+        invert:white,
+    ),
+    'tankesatt': (
+        primary: #5BA2D9,
+        foreground:  #F6F9FC,
+        invert:white,
+    ),
+);
+
+
+@each $theme, $color in $toolbox-themes {
+    .single-#{$theme} {
+        .btn.btn-primary {
+            background-color: map-get($color, primary);
+            border-color: map-get($color, primary);
+        }
+        
+        .featured-post,
+        .box.box-filled {
+            background-color: map-get($color, foreground);
+        }
+
+        .t-foreground {
+            background-color: map-get($color, foreground);
+        }
+
+        .page-header.page-header--#{$theme} {
+            background-color: map-get($color, primary);
+            h1, h2, h3, h4, h5, h6, p, .page-header__meta {
+                color: map-get($color, invert);
+            }
+        }    
+
+        
+    }
+
+    .post-type-archive-#{$theme} {
+        .main-content {
+            background-color: map-get($color, primary);
+            color: map-get($color, invert);
+
+            .modularity-mod-posts {
+                a,
+                a:hover,
+                a:focus {
+                    color: map-get($color, invert);
+                }
+
+                .btn.btn-outline.btn-floating.btn-floating--flat {
+                    border-color: map-get($color, invert) !important;
+                    color: map-get($color, invert);
+                    i.pricon {
+                        color: map-get($color, invert);
+                    }
+
+                    &:hover {
+                        border-color: black!important;
+                        background-color: black !important;
+                    }
+                }
+            }
+
+
+
+            .box.box-card-post .box__title,
+            .box.box-card-post .box__content p,
+            .box .box__content > *,
+            h1, h2, h3, h4, h5, h6, 
+            .h1, .h2, .h3, .h4, .h5, .h6,
+            a,
+            a:hover,
+            a:focus {
+                color: map-get($color, invert);
+            }
+        }
+    }
+}

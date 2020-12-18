@@ -1,3 +1,14 @@
-p {
+p, li {
     font-size: $font-size-copy; 
 }
+
+p.large-text, 
+.s-large-text p {
+    font-size: $font-size-large-sm;
+    font-weight: 300;
+    
+    @media only screen and (min-width: $screen-md-min) {
+        font-size: $font-size-large;
+    }
+}
+
