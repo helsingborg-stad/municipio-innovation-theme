@@ -24,8 +24,13 @@
 
 .is-child-theme .section.fontsize-xlarge .section-article {
 	p {
-		font-size: $font-size-large;
+		font-size: $font-size-large-sm;
 		font-weight: 300;
+		
+		@media only screen and (min-width: $screen-md-min) {
+			font-size: $font-size-large;
+
+		}
 	}
 }
 
