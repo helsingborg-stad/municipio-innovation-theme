@@ -1,9 +1,9 @@
 <div class="grid related-posts {{$classes ?? ''}}" data-equal-container>
     @if (!$hideTitle && !empty($post_title))
-        <div class="grid-xs-12 u-mb-3">
+        <div class="grid-xs-12 u-mb-4">
             <div class="u-w-100">
                 <div class="grid u-align-items-center">
-                    <div class="grid-xs-12 grid-md-auto u-mb-2 u-mb-0@md u-mb-0@lg u-mb-0@xl">
+                    <div class="grid-xs-12 grid-md-auto u-mb-2 u-mb-0@md u-mb-0@lg u-mb-0@xl" style="max-width: 800px;">
                         @yield('before-title')
                         <h2>{!! apply_filters('the_title', $post_title) !!}</h2>
                         @section('after-title')
