@@ -30,7 +30,9 @@ body.is-child-theme {
         box-shadow: none !important;
         border: solid 1px black !important;
         color: black;
-        border-radius: 32px !important;
+        border-radius: 40px !important;
+        width: 40px;
+        line-height: 40px;
         &:hover {
             background-color: black !important;
             &, i {
@@ -46,11 +48,24 @@ body.is-child-theme {
         i.pricon {
             position: absolute;
             color: black;
-            top: -2px;
             width: 100%;
             display: block;
             font-size: 12px;
             line-height: inherit;
         }
+
+        i.pricon.pricon-angle-right, 
+        i.pricon.pricon-angle-left {
+            top: -3px;
+        }
+       
+        i.pricon.pricon-angle-right {
+            left: 1px;
+        }
+       
+        i.pricon.pricon-angle-left {
+            left: -1px;
+        }
     } 
 }
+

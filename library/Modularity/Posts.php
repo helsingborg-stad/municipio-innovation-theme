@@ -7,6 +7,24 @@ class Posts
     {
         add_filter('acf/load_field/key=field_571dfd4c0d9d9', array($this, 'setDefaultViewOnLoad'));
         add_action('acf/save_post', array($this, 'setItemsViewOnSave'));
+        add_filter('InnovationsPortalen/Modularity/Posts/gridClasses', array($this, 'postSliderGridClasses'), 10, 3);
+    }
+
+    public function postSliderGridClasses($gridClasses, $viewData, $moduleData)
+    {
+        if (empty($moduleData['meta']['enable_post_slider']) ||
+            $moduleData['meta']['enable_post_slider'][0] !== '1') {
+            return $gridClasses;
+        }
+
+        $gridClasses = array_merge($gridClasses, array(
+            '1-column' => 'grid-xs-12',
+            '2-column' => 'grid-xs-8 grid-md-6',
+            '3-column' => 'grid-xs-8 grid-md-6 grid-md-4',
+            '4-column' => 'grid-xs-8 grid-md-5 grid-lg-3',
+        ));
+
+        return $gridClasses;
     }
 
     public static function data($moduleData)
@@ -34,9 +52,31 @@ class Posts
             $data['columnsPerRow'] = (int) $postColumnsFieldObject['choices'][$posts_columns];
         }
 
+        $gridClasses = array(
+            '1-column' => 'grid-xs-12',
+            '2-column' => 'grid-xs-12 grid-sm-6',
+            '3-column' => 'grid-xs-12 grid-sm-6 grid-md-4',
+            '4-column' => 'grid-xs-12 grid-sm-6 grid-lg-3',
+        );
+
+        $gridClasses = apply_filters('InnovationsPortalen/Modularity/Posts/gridClasses', $gridClasses, $data, $moduleData);
+
+        if (isset($data['columnsPerRow'])
+            && isset($gridClasses[$data['columnsPerRow'] . '-column'])) {
+            $data['posts_columns'] = $gridClasses[$data['columnsPerRow'] . '-column'];
+        }
+
+
+
         // Post Slider
         if (!empty($meta['enable_post_slider'])
             && $meta['enable_post_slider'][0] === '1') {
+            if (isset($data['columnsPerRow'])
+                && isset($gridClassesPostSlider[$data['columnsPerRow']])) {
+                $data['posts_columns'] = $gridClassesPostSlider[$data['columnsPerRow']];
+            }
+
+
             $flickityOptions = array(
                 'groupCells' => true,
                 'cellAlign' => 'left',
@@ -46,7 +86,7 @@ class Posts
                 'prevNextButtons' => false,
                 'contain' => false,
                 'adaptiveHeight' => false,
-
+                'freeScroll' => true
             );
 
             $data['slider'] = array(

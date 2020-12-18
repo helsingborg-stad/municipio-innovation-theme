@@ -40,11 +40,12 @@ $toolbox-themes: (
 
         .page-header.page-header--#{$theme} {
             background-color: map-get($color, primary);
-        
-            &, h1, .h1, .page-header__title {
+            h1, h2, h3, h4, h5, h6, p, .page-header__meta {
                 color: map-get($color, invert);
             }
         }    
+
+        
     }
 
     .post-type-archive-#{$theme} {

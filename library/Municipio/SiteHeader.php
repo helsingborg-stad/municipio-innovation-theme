@@ -14,6 +14,13 @@ class SiteHeader
             return true;
         }
 
+        if (!empty(get_field('header_transparent_post_types', 'option'))) {
+            if (get_post_type() && in_array(get_post_type(), get_field('header_transparent_post_types', 'option')) ||
+                get_queried_object() && in_array(get_queried_object()->name, get_field('header_transparent_post_types', 'option'))) {
+                return true;
+            }
+        }
+
         return $bool;
     }
 }
