@@ -14,7 +14,9 @@
                 </time>
             @endif --}}
 
-            @if (get_the_excerpt($post->ID))
+            @if (!has_excerpt($post->ID) && get_field('page_header_content', $post->ID))
+                <p>{{get_field('page_header_content', $post->ID)}}</p>
+            @else
                 <p>{{ get_the_excerpt($post->ID)}}</p>
             @endif
         </div>
