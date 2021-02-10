@@ -16,7 +16,7 @@
             </h4>
         </div>
         <div class="featured-post__action">
-            <a class="btn btn-light" href="{{$url}}">{{$buttonText}}</a>
+            <a class="btn btn-light" href="{{$url}}" @if(!empty($blank)) target="_blank" @endif>{{$buttonText}}</a>
         </div>
     </section>
 @endif

@@ -34,11 +34,12 @@ class Init
                 'url' => get_permalink($post->ID),
                 'imageUrl' => municipio_get_thumbnail_source($post->ID, array(75,56), '3:2'),
                 'buttonText' => __('Öppna', INNOVATIONSPORTALEN_TEXTDOMAIN),
+                'blank' => 0
             ), $atts);
        
             $data = array_merge($atts, array());
         }
-
+        
         // Show error to logged in users
         if (empty($post) && empty($atts) && is_user_logged_in()) {
             return __('Please define a valid post id or overrride fields', INNOVATIONSPORTALEN_TEXTDOMAIN);
