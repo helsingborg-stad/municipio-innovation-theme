@@ -101,6 +101,7 @@ class Posts
 
         $data['classes'] = implode(' ', apply_filters('Modularity/Module/Classes', $classes, $post_type, $moduleData));
 
+        $data['templateOverride'] = $meta['template_override'][0] ?? get_post_type($postId);
 
         return $data;
     }

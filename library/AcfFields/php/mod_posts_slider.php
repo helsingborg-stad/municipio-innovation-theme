@@ -62,6 +62,32 @@
             'append' => '',
             'maxlength' => '',
         ),
+        3 => array(
+            'key' => 'field_60be1f26b65b0',
+            'label' => __('Template Override', 'municipio-innovation-theme'),
+            'name' => 'template_override',
+            'type' => 'select',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'choices' => array(
+                'default' => __('Default (none)', 'municipio-innovation-theme'),
+                'challenge' => __('Challenge', 'municipio-innovation-theme'),
+                'project' => __('Project', 'municipio-innovation-theme'),
+            ),
+            'default_value' => __('default', 'municipio-innovation-theme'),
+            'allow_null' => 0,
+            'multiple' => 0,
+            'ui' => 0,
+            'return_format' => 'value',
+            'ajax' => 0,
+            'placeholder' => '',
+        ),
     ),
     'location' => array(
         0 => array(
@@ -78,7 +104,7 @@
     'label_placement' => 'top',
     'instruction_placement' => 'label',
     'hide_on_screen' => '',
-    'active' => 1,
+    'active' => true,
     'description' => '',
 ));
 }

@@ -36,7 +36,7 @@
                 <div class="grid grid--columns u-w-100">
                     @foreach ($posts as $post)
                         <div class="{{ $posts_columns }}">
-                            @includeFirst(['item.post-' . $post->post_type, 'item.post'], ['post' => $post])
+                            @includeFirst(['item.post-' . $templateOverride, 'item.post-' . $post->post_type, 'item.post'], ['post' => $post])
                         </div>
                     @endforeach
                 </div>
