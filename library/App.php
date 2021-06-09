@@ -12,6 +12,8 @@ class App
         new \InnovationsPortalen\Theme\Enqueue();
         add_action('wp_enqueue_scripts', array($this, 'enqueueRobotoFont'));
         add_filter('the_content', array($this, 'removeParagraphWrappingFromImages'), 20, 1);
+        add_filter('Municipio/Theme/Enqueue/deferedLoadingJavascript/disable', '__return_true', 99);
+        add_filter('Municipio/load-wp-jquery', '__return_true', 99);
     }
 
     public function removeParagraphWrappingFromImages($content)
