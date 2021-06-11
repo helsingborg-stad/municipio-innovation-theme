@@ -4,6 +4,10 @@ import smoothscroll from 'smoothscroll-polyfill';
 export default () => {
   smoothscroll.polyfill();
   Object.values(document.querySelectorAll('a[href^="#"]')).forEach(anchor => {
+    if (anchor.getAttribute('href') === '#')
+      return;
+    
+
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
   
