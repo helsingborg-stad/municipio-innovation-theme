@@ -14,6 +14,22 @@ class App
         add_filter('the_content', array($this, 'removeParagraphWrappingFromImages'), 20, 1);
         add_filter('Municipio/Theme/Enqueue/deferedLoadingJavascript/disable', '__return_true', 99);
         add_filter('Municipio/load-wp-jquery', '__return_true', 99);
+        add_action('wp_head', array($this, 'fixTranslatePressStyles'), 10);
+    }
+
+    public function fixTranslatePressStyles()
+    {
+        if (!is_user_logged_in()) {
+            return;
+        }
+
+        $customCSS = '
+            #trp-editor {
+                z-index: 99999;
+            }
+        ';
+
+        echo '<style>' . $customCSS . '</style>';
     }
 
     public function removeParagraphWrappingFromImages($content)
