@@ -19,13 +19,19 @@ class App
 
     public function fixTranslatePressStyles()
     {
-        if (!is_user_logged_in()) {
+        if (!is_user_logged_in()
+            || empty($_GET['trp-edit-translation'])
+            || $_GET['trp-edit-translation'] !== 'true') {
             return;
         }
 
         $customCSS = '
-            #trp-editor {
-                z-index: 99999;
+            #wpadminbar,
+            #site-header {
+                display: none;
+            }
+            body.logged-in {
+                margin-top: 0 !important;
             }
         ';
 
