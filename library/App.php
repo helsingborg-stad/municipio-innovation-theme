@@ -12,30 +12,6 @@ class App
         new \InnovationsPortalen\Theme\Enqueue();
         add_action('wp_enqueue_scripts', array($this, 'enqueueRobotoFont'));
         add_filter('the_content', array($this, 'removeParagraphWrappingFromImages'), 20, 1);
-        add_filter('Municipio/Theme/Enqueue/deferedLoadingJavascript/disable', '__return_true', 99);
-        add_filter('Municipio/load-wp-jquery', '__return_true', 99);
-        add_action('wp_head', array($this, 'fixTranslatePressStyles'), 10);
-    }
-
-    public function fixTranslatePressStyles()
-    {
-        if (!is_user_logged_in()
-            || empty($_GET['trp-edit-translation'])
-            || $_GET['trp-edit-translation'] !== 'true') {
-            return;
-        }
-
-        $customCSS = '
-            #wpadminbar,
-            #site-header {
-                display: none;
-            }
-            body.logged-in {
-                margin-top: 0 !important;
-            }
-        ';
-
-        echo '<style>' . $customCSS . '</style>';
     }
 
     public function removeParagraphWrappingFromImages($content)
