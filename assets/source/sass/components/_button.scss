@@ -19,7 +19,7 @@ body.is-child-theme {
 
     .btn.btn-contrasted.disabled {
         background-color: $c-gray-light;
-        color: #CCCCCC;
+        color: #CCCCCC !important;
     }
 
     .btn.disabled {
