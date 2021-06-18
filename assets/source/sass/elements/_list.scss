@@ -1,0 +1,7 @@
+.is-child-theme {
+    .modularity-mod-text .box-content ul:not(.social-feed) li + li, 
+    .mce-content-body ul li + li, article ul:not(.nav):not(.slider-items):not(.line-numbers):not(.player-playlist):not(.social-feed):not(.dropdown-menu):not(.image-gallery):not(.unlist) li + li, 
+    .unordered-list li + li {
+        margin-top: 12px;
+    }
+}
