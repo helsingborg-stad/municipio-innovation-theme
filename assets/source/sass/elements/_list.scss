@@ -12,4 +12,18 @@
         margin-top: 24px;
     }
     
+    .pricon-list {
+        margin-top: $base * 3;
+        li.pricon-list__item {
+            position: relative;
+            margin-top: $base * 2.5;
+            padding-left: $base * 4;
+            &::before {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+    
+        }
+    }
 }
