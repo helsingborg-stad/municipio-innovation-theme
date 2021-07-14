@@ -22,15 +22,11 @@
         </div>
         <div class="box__content">
             @if ($location && !empty($location['title']))
-                <div class="box__meta">
-                    <b>{{$location['title']}}</b>
-                </div>
+              <span>{{$location['title']}}</span>
             @endif
-            <h3 class="box__title u-mb-0">{{ $post->post_title }}</h3>
+            <h3 class="box__title u-mb-1 u-mt-1">{{ $post->post_title }}</h3>
             @if ($occasion && !empty($occasion['formatted']))
-                <div class="box__meta">
-                    <b>{{$occasion['formatted']}}</b>
-                </div>
+               <span>{{$occasion['formatted']}}</span>
             @endif
         </div>
     </div>
