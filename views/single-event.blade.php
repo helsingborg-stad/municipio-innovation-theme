@@ -37,21 +37,21 @@
                 <div class="box-content">
                     @if (!empty($event['occasion']['formatted']))
                       <div class="u-py-1">
-                        <h4 class="u-pb-1">Tidpunkt</h4>
+                        <h4 class="u-pb-1"><?php _e('Date', 'municipio-innovation-theme'); ?></h4>
                         <p>{{ $event['occasion']['formatted'] }}</p>
                       </div>
                     @endif
 
                     @if (!empty($event['location']['formatted_address']))
                       <div class="u-py-1">
-                        <h4 class="u-pb-1">Plats</h4>
+                        <h4 class="u-pb-1"><?php _e('Location', 'municipio-innovation-theme'); ?></h4>
                         <p>{{ $event['location']['formatted_address'] ?? '' }}</p>
                       </div>
                     @endif
 
                     @if (!empty($organizers = get_field('organizers')))
                       <div class="u-py-1">
-                        <h4 class="u-pb-1">Kontakt</h4>
+                        <h4 class="u-pb-1"><?php _e('Contact', 'municipio-innovation-theme'); ?></h4>
                         @foreach ($organizers as $organizer)
                           @if (!empty($organizer['organizer']))
                             <p>{{ $organizer['organizer'] }}</p>
