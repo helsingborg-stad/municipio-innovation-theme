@@ -15,7 +15,7 @@ $loader->addPrefix('InnovationsPortalen', INNOVATIONSPORTALEN_PATH . 'source/php
 $loader->register();
 
 add_action('after_setup_theme', function () {
-    load_theme_textdomain(INNOVATIONSPORTALEN_TEXTDOMAIN, get_template_directory() . '/languages');
+    load_theme_textdomain(INNOVATIONSPORTALEN_TEXTDOMAIN, INNOVATIONSPORTALEN_PATH . '/languages');
 });
 
 // Acf auto import and export
