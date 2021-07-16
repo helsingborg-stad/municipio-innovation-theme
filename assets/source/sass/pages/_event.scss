@@ -13,8 +13,24 @@
   }
 }
 
-.event-archive__image > img {
-  border-radius: 8px;
-  padding: 0px;
-  margin: 8px 0px;
+.post-type-archive {
+  .event-archive__image > img {
+    border-radius: $border-radius;
+    padding: 0px;
+    margin: 8px 0px;
+  }
+
+  .input-group {
+    background-color: #fff;
+  }
+}
+
+.submit-event {
+  input[type=text],
+  input[type=number],
+  input[type=url],
+  input[type=email],
+  textarea {
+    background-color: $c-gray-light;
+  }
 }
