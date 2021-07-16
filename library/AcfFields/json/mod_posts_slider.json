@@ -75,7 +75,8 @@
             "choices": {
                 "default": "Default (none)",
                 "challenge": "Challenge",
-                "project": "Project"
+                "project": "Project",
+                "event": "Event"
             },
             "default_value": "default",
             "allow_null": 0,

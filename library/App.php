@@ -6,6 +6,7 @@ class App
     public function __construct()
     {
         new \InnovationsPortalen\Modularity\Posts();
+        new \InnovationsPortalen\Modularity\Event();
         new \InnovationsPortalen\Municipio\SiteHeader();
         new \InnovationsPortalen\Editor\ExtendedQuote\Init();
         new \InnovationsPortalen\Editor\PostTypeLink\Init();

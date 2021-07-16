@@ -1,0 +1,36 @@
+.single-event {
+  .box-filled, * {
+    .btn.btn-primary {
+      background-color: #3F94D5;
+      border-color: #3F94D5;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  .section {
+    background-color: #F0F5F7;
+  }
+}
+
+.post-type-archive {
+  .event-archive__image > img {
+    border-radius: $border-radius;
+    padding: 0px;
+    margin: 8px 0px;
+  }
+
+  .input-group {
+    background-color: #fff;
+  }
+}
+
+.submit-event {
+  input[type=text],
+  input[type=number],
+  input[type=url],
+  input[type=email],
+  textarea {
+    background-color: $c-gray-light;
+  }
+}
