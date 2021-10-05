@@ -43,49 +43,6 @@ $toolbox-themes: (
             h1, h2, h3, h4, h5, h6, p, .page-header__meta {
                 color: map-get($color, invert);
             }
-        }    
-
-        
-    }
-
-    .post-type-archive-#{$theme} {
-        .main-content {
-            background-color: map-get($color, primary);
-            color: map-get($color, invert);
-
-            .modularity-mod-posts {
-                a,
-                a:hover,
-                a:focus {
-                    color: map-get($color, invert);
-                }
-
-                .btn.btn-outline.btn-floating.btn-floating--flat {
-                    border-color: map-get($color, invert) !important;
-                    color: map-get($color, invert);
-                    i.pricon {
-                        color: map-get($color, invert);
-                    }
-
-                    &:hover {
-                        border-color: black!important;
-                        background-color: black !important;
-                    }
-                }
-            }
-
-
-
-            .box.box-card-post .box__title,
-            .box.box-card-post .box__content p,
-            .box .box__content > *,
-            h1, h2, h3, h4, h5, h6, 
-            .h1, .h2, .h3, .h4, .h5, .h6,
-            a,
-            a:hover,
-            a:focus {
-                color: map-get($color, invert);
-            }
-        }
+        }       
     }
 }
